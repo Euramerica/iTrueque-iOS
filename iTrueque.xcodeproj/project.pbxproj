@@ -13,6 +13,14 @@
 		2DBCDEB027010D3600C42E32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DBCDEAF27010D3600C42E32 /* Assets.xcassets */; };
 		2DBCDEB327010D3600C42E32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DBCDEB227010D3600C42E32 /* Preview Assets.xcassets */; };
 		2DBCDEB627010D3600C42E32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DBCDEB427010D3600C42E32 /* LaunchScreen.storyboard */; };
+		2DBCDEC027010DCE00C42E32 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DBCDEBF27010DCE00C42E32 /* GoogleService-Info.plist */; };
+		2DBCDEC227010DE200C42E32 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDEC127010DE200C42E32 /* AppConfiguration.swift */; };
+		2DBCDEC427010E0200C42E32 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDEC327010E0200C42E32 /* AppFlowCoordinator.swift */; };
+		2DBCDEC727010E2100C42E32 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDEC627010E2100C42E32 /* AppDIContainer.swift */; };
+		2DBCDEC927010E3500C42E32 /* TabBarSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDEC827010E3500C42E32 /* TabBarSceneDIContainer.swift */; };
+		2DBCDED027010E9500C42E32 /* TabBarFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDECF27010E9500C42E32 /* TabBarFlowCoordinator.swift */; };
+		2DBCDED227010EA000C42E32 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDED127010EA000C42E32 /* TabBarViewModel.swift */; };
+		2DBCDED427010EAF00C42E32 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDED327010EAF00C42E32 /* TabBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		2DBCDEB227010D3600C42E32 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2DBCDEB527010D3600C42E32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DBCDEB727010D3600C42E32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DBCDEBF27010DCE00C42E32 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2DBCDEC127010DE200C42E32 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		2DBCDEC327010E0200C42E32 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
+		2DBCDEC627010E2100C42E32 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
+		2DBCDEC827010E3500C42E32 /* TabBarSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarSceneDIContainer.swift; sourceTree = "<group>"; };
+		2DBCDECF27010E9500C42E32 /* TabBarFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFlowCoordinator.swift; sourceTree = "<group>"; };
+		2DBCDED127010EA000C42E32 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
+		2DBCDED327010EAF00C42E32 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +72,13 @@
 		2DBCDEA827010D3200C42E32 /* iTrueque */ = {
 			isa = PBXGroup;
 			children = (
-				2DBCDEA927010D3200C42E32 /* AppDelegate.swift */,
-				2DBCDEAB27010D3200C42E32 /* SceneDelegate.swift */,
+				2DBCDEBD27010D7A00C42E32 /* Application */,
+				2DBCDECA27010E3E00C42E32 /* Presentation */,
 				2DBCDEAD27010D3200C42E32 /* ContentView.swift */,
-				2DBCDEAF27010D3600C42E32 /* Assets.xcassets */,
+				2DBCDEBE27010D8900C42E32 /* Resources */,
 				2DBCDEB427010D3600C42E32 /* LaunchScreen.storyboard */,
 				2DBCDEB727010D3600C42E32 /* Info.plist */,
+				2DBCDEBF27010DCE00C42E32 /* GoogleService-Info.plist */,
 				2DBCDEB127010D3600C42E32 /* Preview Content */,
 			);
 			path = iTrueque;
@@ -73,6 +90,77 @@
 				2DBCDEB227010D3600C42E32 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2DBCDEBD27010D7A00C42E32 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				2DBCDEA927010D3200C42E32 /* AppDelegate.swift */,
+				2DBCDEAB27010D3200C42E32 /* SceneDelegate.swift */,
+				2DBCDEC127010DE200C42E32 /* AppConfiguration.swift */,
+				2DBCDEC327010E0200C42E32 /* AppFlowCoordinator.swift */,
+				2DBCDEC527010E0C00C42E32 /* DIContainer */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		2DBCDEBE27010D8900C42E32 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2DBCDEAF27010D3600C42E32 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2DBCDEC527010E0C00C42E32 /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				2DBCDEC627010E2100C42E32 /* AppDIContainer.swift */,
+				2DBCDEC827010E3500C42E32 /* TabBarSceneDIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		2DBCDECA27010E3E00C42E32 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2DBCDECB27010E5E00C42E32 /* TabBarScene */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		2DBCDECB27010E5E00C42E32 /* TabBarScene */ = {
+			isa = PBXGroup;
+			children = (
+				2DBCDECC27010E6B00C42E32 /* Flows */,
+				2DBCDECE27010E7500C42E32 /* ViewModel */,
+				2DBCDECD27010E7000C42E32 /* View */,
+			);
+			path = TabBarScene;
+			sourceTree = "<group>";
+		};
+		2DBCDECC27010E6B00C42E32 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				2DBCDECF27010E9500C42E32 /* TabBarFlowCoordinator.swift */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		2DBCDECD27010E7000C42E32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2DBCDED327010EAF00C42E32 /* TabBarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2DBCDECE27010E7500C42E32 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2DBCDED127010EA000C42E32 /* TabBarViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DBCDEB627010D3600C42E32 /* LaunchScreen.storyboard in Resources */,
+				2DBCDEC027010DCE00C42E32 /* GoogleService-Info.plist in Resources */,
 				2DBCDEB327010D3600C42E32 /* Preview Assets.xcassets in Resources */,
 				2DBCDEB027010D3600C42E32 /* Assets.xcassets in Resources */,
 			);
@@ -146,7 +235,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DBCDEAA27010D3200C42E32 /* AppDelegate.swift in Sources */,
+				2DBCDED227010EA000C42E32 /* TabBarViewModel.swift in Sources */,
+				2DBCDEC927010E3500C42E32 /* TabBarSceneDIContainer.swift in Sources */,
 				2DBCDEAC27010D3200C42E32 /* SceneDelegate.swift in Sources */,
+				2DBCDEC727010E2100C42E32 /* AppDIContainer.swift in Sources */,
+				2DBCDEC427010E0200C42E32 /* AppFlowCoordinator.swift in Sources */,
+				2DBCDEC227010DE200C42E32 /* AppConfiguration.swift in Sources */,
+				2DBCDED027010E9500C42E32 /* TabBarFlowCoordinator.swift in Sources */,
+				2DBCDED427010EAF00C42E32 /* TabBarView.swift in Sources */,
 				2DBCDEAE27010D3200C42E32 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,7 +394,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.osvaldochaparro.itrueque.iTrueque;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -319,7 +415,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.osvaldochaparro.itrueque.iTrueque;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
