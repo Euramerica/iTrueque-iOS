@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DABC7AF27039306009AAE88 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DABC7AE27039306009AAE88 /* String.swift */; };
+		2DABC7B127039875009AAE88 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DABC7B027039875009AAE88 /* Color.swift */; };
 		2DBCDEAA27010D3200C42E32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDEA927010D3200C42E32 /* AppDelegate.swift */; };
 		2DBCDEAC27010D3200C42E32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDEAB27010D3200C42E32 /* SceneDelegate.swift */; };
 		2DBCDEAE27010D3200C42E32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDEAD27010D3200C42E32 /* ContentView.swift */; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2DABC7AE27039306009AAE88 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		2DABC7B027039875009AAE88 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		2DBCDEA627010D3200C42E32 /* iTrueque.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTrueque.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DBCDEA927010D3200C42E32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DBCDEAB27010D3200C42E32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				2DBCDECB27010E5E00C42E32 /* TabBarScene */,
+				2DABC7AD270392C6009AAE88 /* Util */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -269,8 +274,10 @@
 				2DBCDEAA27010D3200C42E32 /* AppDelegate.swift in Sources */,
 				2DBCDED227010EA000C42E32 /* TabBarViewModel.swift in Sources */,
 				2DBCDEC927010E3500C42E32 /* TabBarSceneDIContainer.swift in Sources */,
+				2DABC7AF27039306009AAE88 /* String.swift in Sources */,
 				2DBCDEAC27010D3200C42E32 /* SceneDelegate.swift in Sources */,
 				2DBCDEC727010E2100C42E32 /* AppDIContainer.swift in Sources */,
+				2DABC7B127039875009AAE88 /* Color.swift in Sources */,
 				2DBCDEC427010E0200C42E32 /* AppFlowCoordinator.swift in Sources */,
 				2DBCDEC227010DE200C42E32 /* AppConfiguration.swift in Sources */,
 				2DBCDED027010E9500C42E32 /* TabBarFlowCoordinator.swift in Sources */,
