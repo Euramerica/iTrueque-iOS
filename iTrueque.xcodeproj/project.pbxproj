@@ -21,6 +21,13 @@
 		2DBCDED027010E9500C42E32 /* TabBarFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDECF27010E9500C42E32 /* TabBarFlowCoordinator.swift */; };
 		2DBCDED227010EA000C42E32 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDED127010EA000C42E32 /* TabBarViewModel.swift */; };
 		2DBCDED427010EAF00C42E32 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDED327010EAF00C42E32 /* TabBarView.swift */; };
+		D4E183BB270383B9000A3EFD /* FirestorePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E183BA270383B9000A3EFD /* FirestorePath.swift */; };
+		D4E183BF270387ED000A3EFD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E183BE270387ED000A3EFD /* User.swift */; };
+		D4E183C1270388AE000A3EFD /* Alias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E183C0270388AE000A3EFD /* Alias.swift */; };
+		D4E183C327038AFD000A3EFD /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E183C227038AFD000A3EFD /* Product.swift */; };
+		D4E183C727038BE5000A3EFD /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E183C627038BE5000A3EFD /* Condition.swift */; };
+		D4E183CB2703963C000A3EFD /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E183CA2703963C000A3EFD /* Reviews.swift */; };
+		D4E183CD270396B4000A3EFD /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E183CC270396B4000A3EFD /* Messages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +47,13 @@
 		2DBCDECF27010E9500C42E32 /* TabBarFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFlowCoordinator.swift; sourceTree = "<group>"; };
 		2DBCDED127010EA000C42E32 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		2DBCDED327010EAF00C42E32 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		D4E183BA270383B9000A3EFD /* FirestorePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestorePath.swift; sourceTree = "<group>"; };
+		D4E183BE270387ED000A3EFD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D4E183C0270388AE000A3EFD /* Alias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alias.swift; sourceTree = "<group>"; };
+		D4E183C227038AFD000A3EFD /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		D4E183C627038BE5000A3EFD /* Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
+		D4E183CA2703963C000A3EFD /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
+		D4E183CC270396B4000A3EFD /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,10 +88,11 @@
 			children = (
 				2DBCDEBD27010D7A00C42E32 /* Application */,
 				2DBCDECA27010E3E00C42E32 /* Presentation */,
+				D4E183BC270387B2000A3EFD /* Domain */,
+				D4E183B82703836E000A3EFD /* Data */,
 				2DBCDEAD27010D3200C42E32 /* ContentView.swift */,
 				2DBCDEBE27010D8900C42E32 /* Resources */,
 				2DBCDEB427010D3600C42E32 /* LaunchScreen.storyboard */,
-				2DBCDEB727010D3600C42E32 /* Info.plist */,
 				2DBCDEBF27010DCE00C42E32 /* GoogleService-Info.plist */,
 				2DBCDEB127010D3600C42E32 /* Preview Content */,
 			);
@@ -95,6 +110,7 @@
 		2DBCDEBD27010D7A00C42E32 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				2DBCDEB727010D3600C42E32 /* Info.plist */,
 				2DBCDEA927010D3200C42E32 /* AppDelegate.swift */,
 				2DBCDEAB27010D3200C42E32 /* SceneDelegate.swift */,
 				2DBCDEC127010DE200C42E32 /* AppConfiguration.swift */,
@@ -161,6 +177,43 @@
 				2DBCDED127010EA000C42E32 /* TabBarViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D4E183B82703836E000A3EFD /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D4E183B927038388000A3EFD /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D4E183B927038388000A3EFD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D4E183BA270383B9000A3EFD /* FirestorePath.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D4E183BC270387B2000A3EFD /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D4E183BD270387BF000A3EFD /* Entities */,
+				D4E183C0270388AE000A3EFD /* Alias.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D4E183BD270387BF000A3EFD /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				D4E183BE270387ED000A3EFD /* User.swift */,
+				D4E183C227038AFD000A3EFD /* Product.swift */,
+				D4E183C627038BE5000A3EFD /* Condition.swift */,
+				D4E183CA2703963C000A3EFD /* Reviews.swift */,
+				D4E183CC270396B4000A3EFD /* Messages.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,13 +288,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DBCDEAA27010D3200C42E32 /* AppDelegate.swift in Sources */,
+				D4E183C727038BE5000A3EFD /* Condition.swift in Sources */,
+				D4E183BB270383B9000A3EFD /* FirestorePath.swift in Sources */,
+				D4E183C1270388AE000A3EFD /* Alias.swift in Sources */,
+				D4E183C327038AFD000A3EFD /* Product.swift in Sources */,
+				D4E183CD270396B4000A3EFD /* Messages.swift in Sources */,
 				2DBCDED227010EA000C42E32 /* TabBarViewModel.swift in Sources */,
 				2DBCDEC927010E3500C42E32 /* TabBarSceneDIContainer.swift in Sources */,
 				2DBCDEAC27010D3200C42E32 /* SceneDelegate.swift in Sources */,
 				2DBCDEC727010E2100C42E32 /* AppDIContainer.swift in Sources */,
 				2DBCDEC427010E0200C42E32 /* AppFlowCoordinator.swift in Sources */,
+				D4E183BF270387ED000A3EFD /* User.swift in Sources */,
 				2DBCDEC227010DE200C42E32 /* AppConfiguration.swift in Sources */,
 				2DBCDED027010E9500C42E32 /* TabBarFlowCoordinator.swift in Sources */,
+				D4E183CB2703963C000A3EFD /* Reviews.swift in Sources */,
 				2DBCDED427010EAF00C42E32 /* TabBarView.swift in Sources */,
 				2DBCDEAE27010D3200C42E32 /* ContentView.swift in Sources */,
 			);
@@ -386,7 +446,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"iTrueque/Preview Content\"";
 				DEVELOPMENT_TEAM = N77YM99E23;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = iTrueque/Info.plist;
+				INFOPLIST_FILE = iTrueque/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -407,7 +467,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"iTrueque/Preview Content\"";
 				DEVELOPMENT_TEAM = N77YM99E23;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = iTrueque/Info.plist;
+				INFOPLIST_FILE = iTrueque/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
