@@ -69,9 +69,8 @@ struct IntroView: View {
             
         }
         .frame(maxWidth: .infinity)
-        .background(Image("background-intro"))
+        .background(Image("background-intro").resizable().frame(width: .infinity, height: .infinity, alignment: .center))
         .edgesIgnoringSafeArea(.all)
-        .padding(.bottom, 30)
     }
 }
 
