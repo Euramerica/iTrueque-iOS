@@ -9,32 +9,25 @@ import Foundation
 
 
 enum ProductState: Int, Codable {
-    case isActive
-    case isIdle
-    case isGifted
-    case isExchangeble
+    case isActive      = 0
+    case isIdle        = 1
+    case isGifted      = 2
+    case isExchangeble = 3
+    
+    var state: Int {
+        return self.rawValue
+    }
 }
 
 /// Entity for Product itself
 struct Product: Identifiable, Codable {
     
-    enum CodingKeys : String, CodingKey {
-        case id         = "id_producto"
-        case userId     = "id_user"
-        case title
-        case condition
-        case state      = "product_state"
-        case createdAt  = "fecha_alta"
-        case modAt      = "fecha_mod"
-        case coord      = "ubicacion"
-        case isActive
-    }
-    
     //
     let id:         Identifier
     let userId:     Identifier
+    let exchangeId: Identifier
     let title:      String
-    let condition:  Contidion
+    let condition:  Condition
     let state:      ProductState
     let createdAt:  Date
     let modAt:      Date

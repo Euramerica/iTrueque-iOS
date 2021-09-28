@@ -8,15 +8,13 @@
 import Foundation
 
 
-
 /// Entity for User itself
 struct User: Identifiable, Codable {
-
-    
-    enum CodingKeys : String, CodingKey {
-        case id = "id_user"
-    }
-    
     let id: Identifier
-    
+    let userName: Name
+    let email:    Email
+    let password: Password
+    let coord:    Coordinate
+    let avatar:   Avatar
+    let isActive: Bool
 }

@@ -15,4 +15,5 @@ struct Reviews: Identifiable, Codable {
     let userId:      Identifier
     let description: String
     let rate:        Int8
+    let createdAt:   Date
 }
