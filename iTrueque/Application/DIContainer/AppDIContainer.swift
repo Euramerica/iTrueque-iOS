@@ -16,4 +16,9 @@ final class AppDIContainer {
         return TabBarSceneDIContainer(dependencies: dependencies)
     }
     
+    func makeIntroSceneDIContainer() -> IntroSceneDIContainer {
+        let dependencies = IntroSceneDIContainer.Dependencies()
+        return IntroSceneDIContainer(dependencies: dependencies)
+    }
+    
 }
