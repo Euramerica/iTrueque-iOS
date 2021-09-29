@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  iTrueque
+
+  Created by Osvaldo Chaparro Bolaños on 28/9/21.
+  
+*/
+
+// MARK: - Intro
+"Continue_with_apple" = "Continue with Apple";
+"Continue_with_email" = "Continue with Email";
+"Already_has_account" = "¿Ya tienes una cuenta?";
+"Login" = "Iniciar sesión";

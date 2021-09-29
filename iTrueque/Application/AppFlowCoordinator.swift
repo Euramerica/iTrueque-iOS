@@ -20,9 +20,9 @@ final class AppFlowCoordinator {
 
     func start() {
         // In App Flow we can check if user needs to login, if yes we would run login flow
-        let tabBarSceneDIContainer = appDIContainer.makeTabBarSceneDIContainer()
-        let flow = tabBarSceneDIContainer.makeTabBarFlowCoordinator(navigationController: navigationController)
+        navigationController.navigationBar.isHidden = true
+        let introSceneDIContainer = appDIContainer.makeIntroSceneDIContainer()
+        let flow = introSceneDIContainer.makeIntroFlowCoordinator(navigationController: navigationController)
         flow.start()
-        
     }
 }
