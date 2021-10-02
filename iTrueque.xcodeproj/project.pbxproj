@@ -34,6 +34,7 @@
 		D41F193B2708B18E0013C080 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F193A2708B18E0013C080 /* Product.swift */; };
 		D41F193D2708B1C20013C080 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F193C2708B1C20013C080 /* Reviews.swift */; };
 		D41F193F2708B1E20013C080 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F193E2708B1E20013C080 /* User.swift */; };
+		D41F19432708B31C0013C080 /* FirebasePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F19422708B31C0013C080 /* FirebasePath.swift */; };
 		D4E183D027039916000A3EFD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D4E183CF27039916000A3EFD /* FirebaseFirestore */; };
 		D4E183D227039916000A3EFD /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = D4E183D127039916000A3EFD /* FirebaseDatabase */; };
 		D4E183D427039916000A3EFD /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = D4E183D327039916000A3EFD /* FirebaseFirestoreSwift-Beta */; };
@@ -76,6 +77,7 @@
 		D41F193A2708B18E0013C080 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		D41F193C2708B1C20013C080 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 		D41F193E2708B1E20013C080 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D41F19422708B31C0013C080 /* FirebasePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebasePath.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,13 +162,13 @@
 		2DBCDEA827010D3200C42E32 /* iTrueque */ = {
 			isa = PBXGroup;
 			children = (
-				D41F19322708B10A0013C080 /* Domain */,
 				2DBCDEBD27010D7A00C42E32 /* Application */,
+				D41F19402708B2EA0013C080 /* Data */,
+				D41F19322708B10A0013C080 /* Domain */,
 				2DBCDECA27010E3E00C42E32 /* Presentation */,
 				2DBCDEAD27010D3200C42E32 /* ContentView.swift */,
 				2DBCDEBE27010D8900C42E32 /* Resources */,
 				2DBCDEB427010D3600C42E32 /* LaunchScreen.storyboard */,
-				2DBCDEB727010D3600C42E32 /* Info.plist */,
 				2DBCDEBF27010DCE00C42E32 /* GoogleService-Info.plist */,
 				2DBCDEB127010D3600C42E32 /* Preview Content */,
 			);
@@ -184,6 +186,7 @@
 		2DBCDEBD27010D7A00C42E32 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				2DBCDEB727010D3600C42E32 /* Info.plist */,
 				2DBCDEA927010D3200C42E32 /* AppDelegate.swift */,
 				2DBCDEAB27010D3200C42E32 /* SceneDelegate.swift */,
 				2DBCDEC127010DE200C42E32 /* AppConfiguration.swift */,
@@ -275,6 +278,22 @@
 				D41F193E2708B1E20013C080 /* User.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		D41F19402708B2EA0013C080 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D41F19412708B2FE0013C080 /* Firebase */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D41F19412708B2FE0013C080 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				D41F19422708B31C0013C080 /* FirebasePath.swift */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,6 +405,7 @@
 				D41F193B2708B18E0013C080 /* Product.swift in Sources */,
 				2DBCDED427010EAF00C42E32 /* TabBarView.swift in Sources */,
 				2DBCDEAE27010D3200C42E32 /* ContentView.swift in Sources */,
+				D41F19432708B31C0013C080 /* FirebasePath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,7 +559,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"iTrueque/Preview Content\"";
 				DEVELOPMENT_TEAM = N77YM99E23;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = iTrueque/Info.plist;
+				INFOPLIST_FILE = iTrueque/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -560,7 +580,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"iTrueque/Preview Content\"";
 				DEVELOPMENT_TEAM = N77YM99E23;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = iTrueque/Info.plist;
+				INFOPLIST_FILE = iTrueque/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
