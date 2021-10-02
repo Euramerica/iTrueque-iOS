@@ -28,6 +28,12 @@
 		2DBCDED027010E9500C42E32 /* TabBarFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDECF27010E9500C42E32 /* TabBarFlowCoordinator.swift */; };
 		2DBCDED227010EA000C42E32 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDED127010EA000C42E32 /* TabBarViewModel.swift */; };
 		2DBCDED427010EAF00C42E32 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDED327010EAF00C42E32 /* TabBarView.swift */; };
+		D41F19352708B1260013C080 /* Alias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F19342708B1260013C080 /* Alias.swift */; };
+		D41F19372708B15C0013C080 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F19362708B15C0013C080 /* Genre.swift */; };
+		D41F19392708B1760013C080 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F19382708B1760013C080 /* Message.swift */; };
+		D41F193B2708B18E0013C080 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F193A2708B18E0013C080 /* Product.swift */; };
+		D41F193D2708B1C20013C080 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F193C2708B1C20013C080 /* Reviews.swift */; };
+		D41F193F2708B1E20013C080 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F193E2708B1E20013C080 /* User.swift */; };
 		D4E183D027039916000A3EFD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D4E183CF27039916000A3EFD /* FirebaseFirestore */; };
 		D4E183D227039916000A3EFD /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = D4E183D127039916000A3EFD /* FirebaseDatabase */; };
 		D4E183D427039916000A3EFD /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = D4E183D327039916000A3EFD /* FirebaseFirestoreSwift-Beta */; };
@@ -64,6 +70,12 @@
 		2DBCDECF27010E9500C42E32 /* TabBarFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFlowCoordinator.swift; sourceTree = "<group>"; };
 		2DBCDED127010EA000C42E32 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		2DBCDED327010EAF00C42E32 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		D41F19342708B1260013C080 /* Alias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alias.swift; sourceTree = "<group>"; };
+		D41F19362708B15C0013C080 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		D41F19382708B1760013C080 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		D41F193A2708B18E0013C080 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		D41F193C2708B1C20013C080 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
+		D41F193E2708B1E20013C080 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +160,7 @@
 		2DBCDEA827010D3200C42E32 /* iTrueque */ = {
 			isa = PBXGroup;
 			children = (
+				D41F19322708B10A0013C080 /* Domain */,
 				2DBCDEBD27010D7A00C42E32 /* Application */,
 				2DBCDECA27010E3E00C42E32 /* Presentation */,
 				2DBCDEAD27010D3200C42E32 /* ContentView.swift */,
@@ -243,6 +256,27 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		D41F19322708B10A0013C080 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D41F19332708B1120013C080 /* Entities */,
+				D41F19342708B1260013C080 /* Alias.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D41F19332708B1120013C080 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				D41F19362708B15C0013C080 /* Genre.swift */,
+				D41F19382708B1760013C080 /* Message.swift */,
+				D41F193A2708B18E0013C080 /* Product.swift */,
+				D41F193C2708B1C20013C080 /* Reviews.swift */,
+				D41F193E2708B1E20013C080 /* User.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -330,6 +364,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D41F19392708B1760013C080 /* Message.swift in Sources */,
+				D41F19352708B1260013C080 /* Alias.swift in Sources */,
 				2DABC7B32703CA0C009AAE88 /* IntroSceneDIContainer.swift in Sources */,
 				2DBCDEAA27010D3200C42E32 /* AppDelegate.swift in Sources */,
 				2DBCDED227010EA000C42E32 /* TabBarViewModel.swift in Sources */,
@@ -338,12 +374,16 @@
 				2DABC7AF27039306009AAE88 /* String.swift in Sources */,
 				2DBCDEAC27010D3200C42E32 /* SceneDelegate.swift in Sources */,
 				2DBCDEC727010E2100C42E32 /* AppDIContainer.swift in Sources */,
+				D41F193F2708B1E20013C080 /* User.swift in Sources */,
+				D41F19372708B15C0013C080 /* Genre.swift in Sources */,
 				2D006EA5270260CB00BD5774 /* IntroView.swift in Sources */,
 				2DABC7B127039875009AAE88 /* Color.swift in Sources */,
 				2DBCDEC427010E0200C42E32 /* AppFlowCoordinator.swift in Sources */,
 				2DBCDEC227010DE200C42E32 /* AppConfiguration.swift in Sources */,
 				2DBCDED027010E9500C42E32 /* TabBarFlowCoordinator.swift in Sources */,
 				2D006EA3270260B700BD5774 /* IntroFlowCoordinator.swift in Sources */,
+				D41F193D2708B1C20013C080 /* Reviews.swift in Sources */,
+				D41F193B2708B18E0013C080 /* Product.swift in Sources */,
 				2DBCDED427010EAF00C42E32 /* TabBarView.swift in Sources */,
 				2DBCDEAE27010D3200C42E32 /* ContentView.swift in Sources */,
 			);
