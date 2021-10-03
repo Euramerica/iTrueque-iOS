@@ -35,6 +35,8 @@
 		D41F193D2708B1C20013C080 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F193C2708B1C20013C080 /* Reviews.swift */; };
 		D41F193F2708B1E20013C080 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F193E2708B1E20013C080 /* User.swift */; };
 		D41F19432708B31C0013C080 /* FirebasePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F19422708B31C0013C080 /* FirebasePath.swift */; };
+		D41F19482708BA8E0013C080 /* RemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F19472708BA8E0013C080 /* RemoteDataManager.swift */; };
+		D41F194A2708BBAB0013C080 /* ProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F19492708BBAB0013C080 /* ProductRepository.swift */; };
 		D4E183D027039916000A3EFD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D4E183CF27039916000A3EFD /* FirebaseFirestore */; };
 		D4E183D227039916000A3EFD /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = D4E183D127039916000A3EFD /* FirebaseDatabase */; };
 		D4E183D427039916000A3EFD /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = D4E183D327039916000A3EFD /* FirebaseFirestoreSwift-Beta */; };
@@ -78,6 +80,8 @@
 		D41F193C2708B1C20013C080 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 		D41F193E2708B1E20013C080 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D41F19422708B31C0013C080 /* FirebasePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebasePath.swift; sourceTree = "<group>"; };
+		D41F19472708BA8E0013C080 /* RemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataManager.swift; sourceTree = "<group>"; };
+		D41F19492708BBAB0013C080 /* ProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,7 +287,7 @@
 		D41F19402708B2EA0013C080 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				D41F19412708B2FE0013C080 /* Firebase */,
+				D41F19442708BA5D0013C080 /* DataManager */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -292,8 +296,34 @@
 			isa = PBXGroup;
 			children = (
 				D41F19422708B31C0013C080 /* FirebasePath.swift */,
+				D41F19492708BBAB0013C080 /* ProductRepository.swift */,
 			);
 			path = Firebase;
+			sourceTree = "<group>";
+		};
+		D41F19442708BA5D0013C080 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				D41F19462708BA6F0013C080 /* Remote */,
+				D41F19452708BA690013C080 /* Local */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		D41F19452708BA690013C080 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		D41F19462708BA6F0013C080 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				D41F19412708B2FE0013C080 /* Firebase */,
+				D41F19472708BA8E0013C080 /* RemoteDataManager.swift */,
+			);
+			path = Remote;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,6 +416,7 @@
 				D41F19392708B1760013C080 /* Message.swift in Sources */,
 				D41F19352708B1260013C080 /* Alias.swift in Sources */,
 				2DABC7B32703CA0C009AAE88 /* IntroSceneDIContainer.swift in Sources */,
+				D41F19482708BA8E0013C080 /* RemoteDataManager.swift in Sources */,
 				2DBCDEAA27010D3200C42E32 /* AppDelegate.swift in Sources */,
 				2DBCDED227010EA000C42E32 /* TabBarViewModel.swift in Sources */,
 				2DBCDEC927010E3500C42E32 /* TabBarSceneDIContainer.swift in Sources */,
@@ -393,6 +424,7 @@
 				2DABC7AF27039306009AAE88 /* String.swift in Sources */,
 				2DBCDEAC27010D3200C42E32 /* SceneDelegate.swift in Sources */,
 				2DBCDEC727010E2100C42E32 /* AppDIContainer.swift in Sources */,
+				D41F194A2708BBAB0013C080 /* ProductRepository.swift in Sources */,
 				D41F193F2708B1E20013C080 /* User.swift in Sources */,
 				D41F19372708B15C0013C080 /* Genre.swift in Sources */,
 				2D006EA5270260CB00BD5774 /* IntroView.swift in Sources */,
