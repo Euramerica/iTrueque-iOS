@@ -30,7 +30,7 @@ struct IntroView: View {
                     Text("Continue_with_apple".localized()).foregroundColor(.black)
                     Spacer()
                 }
-                .frame(width: .infinity, height:20, alignment: .center)
+                .frame(height: 20, alignment: .center)
                 .padding(10)
             }
             .frame(maxWidth: .infinity)
@@ -44,11 +44,11 @@ struct IntroView: View {
                 
             }) {
                 HStack(spacing: 70){
-                    Image(systemName: "mail").foregroundColor(.black)
-                    Text("Continue_with_email".localized()).foregroundColor(.black)
+                    Image(systemName: "mail").foregroundColor(.white)
+                    Text("Continue_with_email".localized()).foregroundColor(.white)
                     Spacer()
                 }
-                .frame(width: .infinity, height:20, alignment: .center)
+                .frame(height: 20, alignment: .center)
                 .padding(10)
             }
             .background(Color.mainColor)
@@ -58,18 +58,20 @@ struct IntroView: View {
             .padding(.bottom, 50)
             
             HStack{
-                Text("Already_has_account".localized()).foregroundColor(.white)
+                Text("Already_has_account".localized()).foregroundColor(.white).fontWeight(.light)
                 Button(action: {
                     
                 }) {
-                    Text("Login".localized()).foregroundColor(.mainColor).bold()
+                    Text("Login".localized()).foregroundColor(.mainColor).fontWeight(.semibold)
                 }
             }
             .padding(.bottom, 50)
             
         }
         .frame(maxWidth: .infinity)
-        .background(Image("background-intro").resizable().frame(width: .infinity, height: .infinity, alignment: .center))
+        .background(Image("background-intro")
+            .resizable()
+            .frame(width: .infinity, height: .infinity, alignment: .center))
         .edgesIgnoringSafeArea(.all)
     }
 }
