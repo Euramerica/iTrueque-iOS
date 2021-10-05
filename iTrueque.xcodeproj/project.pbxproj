@@ -23,6 +23,7 @@
 		2DABC7B32703CA0C009AAE88 /* IntroSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DABC7B22703CA0C009AAE88 /* IntroSceneDIContainer.swift */; };
 		2DB34983270B5FF100CB63F9 /* StoredLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB34982270B5FF100CB63F9 /* StoredLogin.swift */; };
 		2DB34986270BAF9600CB63F9 /* UserAuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB34985270BAF9600CB63F9 /* UserAuthenticationRepository.swift */; };
+		2DB4650D270D0121007705A7 /* UserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4650C270D0121007705A7 /* UserApp.swift */; };
 		2DBCDEAA27010D3200C42E32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDEA927010D3200C42E32 /* AppDelegate.swift */; };
 		2DBCDEAC27010D3200C42E32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDEAB27010D3200C42E32 /* SceneDelegate.swift */; };
 		2DBCDEB027010D3600C42E32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DBCDEAF27010D3600C42E32 /* Assets.xcassets */; };
@@ -65,6 +66,7 @@
 		2DABC7B22703CA0C009AAE88 /* IntroSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroSceneDIContainer.swift; sourceTree = "<group>"; };
 		2DB34982270B5FF100CB63F9 /* StoredLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredLogin.swift; sourceTree = "<group>"; };
 		2DB34985270BAF9600CB63F9 /* UserAuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthenticationRepository.swift; sourceTree = "<group>"; };
+		2DB4650C270D0121007705A7 /* UserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApp.swift; sourceTree = "<group>"; };
 		2DBCDEA627010D3200C42E32 /* iTrueque.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTrueque.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DBCDEA927010D3200C42E32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DBCDEAB27010D3200C42E32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				2DB34982270B5FF100CB63F9 /* StoredLogin.swift */,
+				2DB4650C270D0121007705A7 /* UserApp.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				2D5E8DFE270A6F0C00F92594 /* VerifyStoredLoginUseCase.swift in Sources */,
 				2D5E8DED27099BAA00F92594 /* SplashFlowCoordinator.swift in Sources */,
 				2D5E8DEB27099B9600F92594 /* SplashViewModel.swift in Sources */,
+				2DB4650D270D0121007705A7 /* UserApp.swift in Sources */,
 				2DBCDED227010EA000C42E32 /* TabBarViewModel.swift in Sources */,
 				2D5E8DFC270A6EEC00F92594 /* GetStoredLoginUseCase.swift in Sources */,
 				2DB34983270B5FF100CB63F9 /* StoredLogin.swift in Sources */,

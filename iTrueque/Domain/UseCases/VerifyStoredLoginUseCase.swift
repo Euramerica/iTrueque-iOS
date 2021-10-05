@@ -7,12 +7,11 @@
 
 import Combine
 import Foundation
-import Firebase
 
 public final class VerifyStoredLogin {
     private let repository = UserAuthenticationRepository()
 
-    func execute(email: String, password: String) -> AnyPublisher<User, Error> {
+    func execute(email: String, password: String) -> AnyPublisher<UserApp, Error> {
         repository.doLogin(email: email, password: password)
             .eraseToAnyPublisher()
 

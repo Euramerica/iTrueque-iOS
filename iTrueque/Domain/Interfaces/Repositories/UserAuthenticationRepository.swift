@@ -7,7 +7,7 @@
 
 import Combine
 import Foundation
-import Firebase
+import FirebaseAuth
 
 final class UserAuthenticationRepository {
     
@@ -20,14 +20,15 @@ final class UserAuthenticationRepository {
             .eraseToAnyPublisher()
     }
    
-    func doLogin(email: String, password: String) -> AnyPublisher<User, Error> {
+    func doLogin(email: String, password: String) -> AnyPublisher<UserApp, Error> {
         Deferred {
-            Future<User, Error> { promise in
+            Future<UserApp, Error> { promise in
                 Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
                     if let error = error {
                         return promise(.failure(error))
-                    } else if let user = result?.user {
-                        return promise(.success(user))
+                    } else if let email = result?.user.email {
+                        let userApp = UserApp(email: email, password: password)
+                        return promise(.success(userApp))
                     }
                 }
             }
