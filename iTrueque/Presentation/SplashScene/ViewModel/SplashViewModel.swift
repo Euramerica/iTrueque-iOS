@@ -32,7 +32,6 @@ enum ModelDataState: Equatable {
 }
 
 struct SplashState {
-    var validLogin: Bool = false
     var dataState: ModelDataState = .idle
     
     mutating func changeViewModelState(newViewModelState: ModelDataState) {
@@ -63,10 +62,6 @@ class SplashViewModel: ViewModel {
         self.verifyStoredLogin = verifyStoredLogin
         self.coordinatorActions = coordinatorActions
         self.state.changeViewModelState(newViewModelState: .loading)
-    }
-    
-    func checkStoreLogin() {
-        self.state.validLogin = true
     }
     
     func handle(_ action: SplashAction) {
