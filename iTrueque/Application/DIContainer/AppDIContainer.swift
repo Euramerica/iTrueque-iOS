@@ -11,9 +11,9 @@ final class AppDIContainer {
     
     lazy var appConfiguration = AppConfiguration()
     
-    func makeTabBarSceneDIContainer() -> TabBarSceneDIContainer {
-        let dependencies = TabBarSceneDIContainer.Dependencies()
-        return TabBarSceneDIContainer(dependencies: dependencies)
+    func makeSplashSceneDIContainer() -> SplashSceneDIContainer {
+        let dependencies = SplashSceneDIContainer.Dependencies()
+        return SplashSceneDIContainer(dependencies: dependencies)
     }
     
     func makeIntroSceneDIContainer() -> IntroSceneDIContainer {
@@ -21,4 +21,8 @@ final class AppDIContainer {
         return IntroSceneDIContainer(dependencies: dependencies)
     }
     
+    func makeTabBarSceneDIContainer() -> TabBarSceneDIContainer {
+        let dependencies = TabBarSceneDIContainer.Dependencies()
+        return TabBarSceneDIContainer(dependencies: dependencies)
+    }
 }
