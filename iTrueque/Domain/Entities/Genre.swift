@@ -19,7 +19,7 @@ enum GenreType: Int, Codable {
 
 
 /// Entity for gener itself
-struct Genre: Identifiable, Codable {
+struct Genre: Remotable {
     let id:    Identifier
     let genre: GenreType
 }

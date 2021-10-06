@@ -37,6 +37,7 @@
 		D41F19432708B31C0013C080 /* FirebasePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F19422708B31C0013C080 /* FirebasePath.swift */; };
 		D41F19482708BA8E0013C080 /* RemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F19472708BA8E0013C080 /* RemoteDataManager.swift */; };
 		D41F194A2708BBAB0013C080 /* ProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F19492708BBAB0013C080 /* ProductRepository.swift */; };
+		D48DC88F270B78B200AAD262 /* ProductsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48DC88E270B78B200AAD262 /* ProductsUseCase.swift */; };
 		D4E183D027039916000A3EFD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D4E183CF27039916000A3EFD /* FirebaseFirestore */; };
 		D4E183D227039916000A3EFD /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = D4E183D127039916000A3EFD /* FirebaseDatabase */; };
 		D4E183D427039916000A3EFD /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = D4E183D327039916000A3EFD /* FirebaseFirestoreSwift-Beta */; };
@@ -82,6 +83,7 @@
 		D41F19422708B31C0013C080 /* FirebasePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebasePath.swift; sourceTree = "<group>"; };
 		D41F19472708BA8E0013C080 /* RemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataManager.swift; sourceTree = "<group>"; };
 		D41F19492708BBAB0013C080 /* ProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepository.swift; sourceTree = "<group>"; };
+		D48DC88E270B78B200AAD262 /* ProductsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,8 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				2DBCDEBD27010D7A00C42E32 /* Application */,
-				D41F19402708B2EA0013C080 /* Data */,
 				D41F19322708B10A0013C080 /* Domain */,
+				D41F19402708B2EA0013C080 /* Data */,
 				2DBCDECA27010E3E00C42E32 /* Presentation */,
 				2DBCDEAD27010D3200C42E32 /* ContentView.swift */,
 				2DBCDEBE27010D8900C42E32 /* Resources */,
@@ -267,6 +269,8 @@
 			isa = PBXGroup;
 			children = (
 				D41F19332708B1120013C080 /* Entities */,
+				D41F194B2709ED060013C080 /* UseCases */,
+				D41F194E2709EF820013C080 /* Interfaces */,
 				D41F19342708B1260013C080 /* Alias.swift */,
 			);
 			path = Domain;
@@ -324,6 +328,21 @@
 				D41F19472708BA8E0013C080 /* RemoteDataManager.swift */,
 			);
 			path = Remote;
+			sourceTree = "<group>";
+		};
+		D41F194B2709ED060013C080 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				D48DC88E270B78B200AAD262 /* ProductsUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		D41F194E2709EF820013C080 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interfaces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,6 +449,7 @@
 				2D006EA5270260CB00BD5774 /* IntroView.swift in Sources */,
 				2DABC7B127039875009AAE88 /* Color.swift in Sources */,
 				2DBCDEC427010E0200C42E32 /* AppFlowCoordinator.swift in Sources */,
+				D48DC88F270B78B200AAD262 /* ProductsUseCase.swift in Sources */,
 				2DBCDEC227010DE200C42E32 /* AppConfiguration.swift in Sources */,
 				2DBCDED027010E9500C42E32 /* TabBarFlowCoordinator.swift in Sources */,
 				2D006EA3270260B700BD5774 /* IntroFlowCoordinator.swift in Sources */,

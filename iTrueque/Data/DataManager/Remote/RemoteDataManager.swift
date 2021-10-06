@@ -8,9 +8,10 @@
 import Foundation
 
 
+/// Conform this protocol to all remote API requests
 protocol RemoteDataManager {
-    func fetchAll()
-    func getById(_ id: Identifier)
-    func update(_ id: Identifier)
-    func delete(_ id: Identifier)
+    func fetchAll<T: Remotable>(completion: @escaping (Result<T, Error>) -> ())
+    func add<T: Remotable>(completion: @escaping (Result<T, Error>) -> ())
+    func update<T: Remotable>(completion: @escaping (Result<T, Error>) -> ())
+    func delete<T: Remotable>(completion: @escaping (Result<T, Error>) -> ())
 }

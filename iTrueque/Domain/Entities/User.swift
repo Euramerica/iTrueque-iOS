@@ -8,7 +8,7 @@
 import Foundation
 
 /// Entity for User itself
-struct User: Identifiable, Codable {
+struct User: Remotable {
     let id: Identifier
     let userName: Name
     let email:    Email

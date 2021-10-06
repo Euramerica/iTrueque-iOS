@@ -9,7 +9,7 @@ import Foundation
 
 
 /// Entity for Reviews itself
-struct Reviews: Identifiable, Codable {
+struct Reviews: Remotable {
     
     let id:          Identifier
     let productId:   Identifier

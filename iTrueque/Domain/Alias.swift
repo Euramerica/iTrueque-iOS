@@ -7,6 +7,9 @@
 
 import UIKit
 
+/// Alias for Codable & Identifiable. Use for entity to conform both for RESTApi and SwiftUI purposes
+typealias Remotable = Codable & Identifiable
+
 /// Unique identifier for ID properties
 typealias Identifier = String
 
@@ -20,10 +23,10 @@ typealias Condition = String
 typealias Name = String
 
 /// Descrive itself for some kind of user email
-typealias Email    = String
+typealias Email = String
 
 /// Descrive itself for some kind of user password
 typealias Password = String
 
 /// Descrive itself for some kind of user string url that leads to avatar
-typealias Avatar   = String
+typealias Avatar = String

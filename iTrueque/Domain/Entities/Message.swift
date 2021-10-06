@@ -17,7 +17,7 @@ enum MessageStatus: Int, Codable {
 
 
 /// Entity for Message itself
-struct Message: Identifiable, Codable {
+struct Message: Remotable {
     let id:         Identifier
     let ownerId:    Identifier
     let productId:  Identifier

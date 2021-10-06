@@ -21,7 +21,7 @@ enum ProductState: Int, Codable {
 }
 
 /// Entity for Product itself
-struct Product: Identifiable, Codable {
+struct Product: Remotable {
     
     //
     let id:         Identifier
