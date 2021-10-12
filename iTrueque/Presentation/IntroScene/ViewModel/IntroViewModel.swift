@@ -20,8 +20,9 @@ struct IntroState {
     }
 }
 
+
 enum IntroAction{
-    case createNewUser(email: String, password: String)
+    case createNewUser(userName: String, email: String, password: String)
     case doLogin(email: String, password: String)
 }
 
@@ -29,19 +30,21 @@ class IntroViewModel: ViewModel{
     
     //Wrapped properties
     @State var state: IntroState
-   
     
+
     //Stored properties
     private let verifyStoredLogin: VerifyStoredLogin
+    private let createNewUser: CreateNewUser
     private let coordinatorActions: IntroViewModelActions?
     
     //
     private var cancellableSet: Set<AnyCancellable> = []
     
-    init(state: IntroState, verifyStoredLogin: VerifyStoredLogin, coordinatorActions: IntroViewModelActions? = nil) {
+    init(state: IntroState, verifyStoredLogin: VerifyStoredLogin, createNewUser: CreateNewUser, coordinatorActions: IntroViewModelActions? = nil) {
         
         self.state = state
         self.verifyStoredLogin = verifyStoredLogin
+        self.createNewUser = createNewUser
         self.coordinatorActions = coordinatorActions
         self.state.changeViewModelState(newViewModelState: .loading)
     }
@@ -49,8 +52,23 @@ class IntroViewModel: ViewModel{
     
     func handle(_ action: IntroAction) {
         switch action{
-        case .createNewUser(email: let email, password: let password):
-            break
+        case .createNewUser(let userName, email: let email, password: let password):
+            createNewUser.execute(userName: userName, email: email, password: password)
+                .sink { [weak self] result in
+                    switch result{
+                    
+                    case .finished:
+                        self?.coordinatorActions?.showHome()
+                    case .failure(_):
+                        print("failed!")
+                    }
+                    
+                    
+                } receiveValue: { user in
+                    print(user.email)
+                   
+                }.store(in: &cancellableSet)
+
             
         
         //
@@ -61,13 +79,13 @@ class IntroViewModel: ViewModel{
                     case .finished:
                         break
                     case .failure(_):
-//                        self?.coordinatorActions?.showHome()
                     print("failed!")
                     }
                 } receiveValue: { [weak self] user in
                     self?.coordinatorActions?.showHome()
                 }
                 .store(in: &cancellableSet)
+
         }
     }
     
