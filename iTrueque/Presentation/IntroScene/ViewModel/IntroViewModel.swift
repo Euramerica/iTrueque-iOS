@@ -29,7 +29,7 @@ class IntroViewModel: ViewModel{
     
     //Wrapped properties
     @State var state: IntroState
-    
+   
     
     //Stored properties
     private let verifyStoredLogin: VerifyStoredLogin
@@ -51,6 +51,9 @@ class IntroViewModel: ViewModel{
         switch action{
         case .createNewUser(email: let email, password: let password):
             break
+            
+        
+        //
         case .doLogin(let email, let password):
             verifyStoredLogin.execute(email: email, password: password)
                 .sink { [weak self] completion in
@@ -58,7 +61,8 @@ class IntroViewModel: ViewModel{
                     case .finished:
                         break
                     case .failure(_):
-                        self?.coordinatorActions?.showHome()
+//                        self?.coordinatorActions?.showHome()
+                    print("failed!")
                     }
                 } receiveValue: { [weak self] user in
                     self?.coordinatorActions?.showHome()
