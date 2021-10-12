@@ -13,10 +13,10 @@ struct LoginView: View {
     @State private var email:       String = ""
     @State private var password:    String = ""
     @State private var isEditing:   Bool = false
-    
+    @Binding var dissmiss: Bool
     
     //ViewModel
-//    let viewModel = LoginViewModel()
+    @EnvironmentObject var viewModel: AnyViewModel<IntroState, IntroAction>
     
     var body: some View {
         VStack{
@@ -59,7 +59,7 @@ struct LoginView: View {
             Button(action: {
                 
                 guard !email.isEmpty, !password.isEmpty else { return }
-//                viewModel.signUp(email: email, password: password)
+                viewModel.handle(.doLogin(email: email, password: password))
                 
             }, label: {
                 Text("Login".localized())
@@ -87,6 +87,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(dissmiss: .constant(false))
     }
 }

@@ -16,7 +16,7 @@ struct RegisterView: View {
     
     
     //ViewModel
-//    let viewModel = LoginViewModel()
+    @EnvironmentObject var viewModel: AnyViewModel<IntroState, IntroAction>
     
     var body: some View {
         VStack{

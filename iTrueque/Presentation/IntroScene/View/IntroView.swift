@@ -10,12 +10,10 @@ import SwiftUI
 struct IntroView: View {
     
     
-    
+    //Wrapped properties
     @State private var showLogin: Bool   = false
     @State private var showRegiter: Bool = false
-    
-    @EnvironmentObject
-    var viewModel: AnyViewModel<SplashState, SplashAction>
+    @EnvironmentObject var viewModel: AnyViewModel<IntroState, IntroAction>
     
     var body: some View {
         VStack{
@@ -80,7 +78,7 @@ struct IntroView: View {
                     Text("Login".localized()).foregroundColor(.mainColor).fontWeight(.semibold)
                 }
                 .sheet(isPresented: $showLogin, content: {
-                    LoginView()
+                    LoginView(dissmiss: $showLogin).environmentObject(viewModel)
                 })
             }
             .padding(.bottom, 50)
