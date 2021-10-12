@@ -37,6 +37,7 @@
 		2DBCDED027010E9500C42E32 /* TabBarFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDECF27010E9500C42E32 /* TabBarFlowCoordinator.swift */; };
 		2DBCDED227010EA000C42E32 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDED127010EA000C42E32 /* TabBarViewModel.swift */; };
 		2DBCDED427010EAF00C42E32 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDED327010EAF00C42E32 /* TabBarView.swift */; };
+		D4ACDCFC27155C230002BC18 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACDCFB27155C230002BC18 /* LoginView.swift */; };
 		D4E183D027039916000A3EFD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D4E183CF27039916000A3EFD /* FirebaseFirestore */; };
 		D4E183D227039916000A3EFD /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = D4E183D127039916000A3EFD /* FirebaseDatabase */; };
 		D4E183D427039916000A3EFD /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = D4E183D327039916000A3EFD /* FirebaseFirestoreSwift-Beta */; };
@@ -82,6 +83,7 @@
 		2DBCDECF27010E9500C42E32 /* TabBarFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFlowCoordinator.swift; sourceTree = "<group>"; };
 		2DBCDED127010EA000C42E32 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		2DBCDED327010EAF00C42E32 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		D4ACDCFB27155C230002BC18 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				2D006EA4270260CB00BD5774 /* IntroView.swift */,
+				D4ACDCFB27155C230002BC18 /* LoginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				2DBCDED227010EA000C42E32 /* TabBarViewModel.swift in Sources */,
 				2D5E8DFC270A6EEC00F92594 /* GetStoredLoginUseCase.swift in Sources */,
 				2DB34983270B5FF100CB63F9 /* StoredLogin.swift in Sources */,
+				D4ACDCFC27155C230002BC18 /* LoginView.swift in Sources */,
 				2DBCDEC927010E3500C42E32 /* TabBarSceneDIContainer.swift in Sources */,
 				2D006EA7270260E300BD5774 /* IntroViewModel.swift in Sources */,
 				2DABC7AF27039306009AAE88 /* String.swift in Sources */,

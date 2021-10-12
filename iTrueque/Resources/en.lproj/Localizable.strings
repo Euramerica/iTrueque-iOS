@@ -7,7 +7,10 @@
 */
 
 // MARK: - Intro
-"Continue_with_apple" = "Registro con Apple";
-"Continue_with_email" = "Registro con Email";
-"Already_has_account" = "¿Ya tienes una cuenta?";
-"Login" = "Iniciar sesión";
+"Continue_with_apple"       = "Registro con Apple";
+"Continue_with_email"       = "Registro con Email";
+"Already_has_account"       = "¿Ya tienes una cuenta?";
+"Login"                     = "Iniciar sesión";
+"Email"                     = "Correo electronico";
+"Password"                  = "Contraseña";
+"Forgot_password"           = "¿Has olvidado la contraseña?";
