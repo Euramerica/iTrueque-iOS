@@ -10,6 +10,7 @@ import SwiftUI
 struct RegisterView: View {
     
     //
+    @State private var userName:    String = ""
     @State private var email:       String = ""
     @State private var password:    String = ""
     @State private var isEditing:   Bool = false
@@ -24,7 +25,8 @@ struct RegisterView: View {
                 .padding(.top, 16)
         
             VStack {
-                TextField("Your_name".localized(), text: $email) { currentEditState in
+                TextField("Your_name".localized(), text: $userName
+    ) { currentEditState in
                     self.isEditing = currentEditState
                 }
                 .padding(.horizontal)
@@ -34,7 +36,7 @@ struct RegisterView: View {
                         .stroke(isEditing ?Color.mainColor :Color.bodyColor, lineWidth: 3)
                 )
                 
-                TextField("Email".localized(), text: $password) { currentEditState in
+                TextField("Email".localized(), text: $email) { currentEditState in
                     self.isEditing = currentEditState
                 }
                 .padding(.horizontal)
@@ -64,6 +66,9 @@ struct RegisterView: View {
         
             
             Button(action: {
+                
+                guard !email.isEmpty, !password.isEmpty, !userName.isEmpty else { return }
+                viewModel.handle(.createNewUser(userName: userName, email: email, password: password))
                 
             }, label: {
                 Text("Register_user".localized())
