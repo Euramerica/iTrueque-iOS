@@ -11,8 +11,8 @@ struct IntroView: View {
     
     
     //Wrapped properties
-    @State private var showLogin: Bool   = false
-    @State private var showRegiter: Bool = false
+    @State private var isLogin: Bool   = false
+    @State private var isRegister: Bool = false
     @EnvironmentObject var viewModel: AnyViewModel<IntroState, IntroAction>
     
     var body: some View {
@@ -47,7 +47,7 @@ struct IntroView: View {
             .padding(.bottom, 5)
             
             Button(action: {
-                showRegiter.toggle()
+                isRegister.toggle()
             }) {
                 HStack(spacing: 70){
                     Image(systemName: "mail").foregroundColor(.white)
@@ -62,7 +62,7 @@ struct IntroView: View {
             .padding(.leading, 15)
             .padding(.trailing, 15)
             .padding(.bottom, 50)
-            .sheet(isPresented: $showRegiter, content: {
+            .sheet(isPresented: $isRegister, content: {
                 RegisterView()
             })
             
@@ -71,15 +71,15 @@ struct IntroView: View {
             HStack{
                 Text("Already_has_account".localized()).foregroundColor(.white).fontWeight(.light)
                 Button(action: {
-                    
-                    showLogin.toggle()
-                    
+                    isLogin.toggle()
                 }) {
                     Text("Login".localized()).foregroundColor(.mainColor).fontWeight(.semibold)
                 }
-                .sheet(isPresented: $showLogin, content: {
-                    LoginView(dissmiss: $showLogin).environmentObject(viewModel)
+                .sheet(isPresented: $isLogin, content: {
+                    LoginView(dissmiss: $isLogin)
                 })
+                
+
             }
             .padding(.bottom, 50)
             
