@@ -38,6 +38,7 @@
 		2DBCDED227010EA000C42E32 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDED127010EA000C42E32 /* TabBarViewModel.swift */; };
 		2DBCDED427010EAF00C42E32 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDED327010EAF00C42E32 /* TabBarView.swift */; };
 		D4ACDCFC27155C230002BC18 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACDCFB27155C230002BC18 /* LoginView.swift */; };
+		D4ACDCFE2715630E0002BC18 /* ModelDataState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACDCFD2715630E0002BC18 /* ModelDataState.swift */; };
 		D4E183D027039916000A3EFD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D4E183CF27039916000A3EFD /* FirebaseFirestore */; };
 		D4E183D227039916000A3EFD /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = D4E183D127039916000A3EFD /* FirebaseDatabase */; };
 		D4E183D427039916000A3EFD /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = D4E183D327039916000A3EFD /* FirebaseFirestoreSwift-Beta */; };
@@ -84,6 +85,7 @@
 		2DBCDED127010EA000C42E32 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		2DBCDED327010EAF00C42E32 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		D4ACDCFB27155C230002BC18 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D4ACDCFD2715630E0002BC18 /* ModelDataState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				2D5E8DF12709C7E700F92594 /* ViewModel.swift */,
+				D4ACDCFD2715630E0002BC18 /* ModelDataState.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4ACDCFE2715630E0002BC18 /* ModelDataState.swift in Sources */,
 				2DABC7B32703CA0C009AAE88 /* IntroSceneDIContainer.swift in Sources */,
 				2DBCDEAA27010D3200C42E32 /* AppDelegate.swift in Sources */,
 				2D5E8DE927099B8B00F92594 /* SplashView.swift in Sources */,

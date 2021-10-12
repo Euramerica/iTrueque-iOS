@@ -9,6 +9,14 @@ import SwiftUI
 
 struct IntroView: View {
     
+    
+    
+    @State private var showLogin: Bool   = false
+    @State private var showRegiter: Bool = false
+    
+    @EnvironmentObject
+    var viewModel: AnyViewModel<SplashState, SplashAction>
+    
     var body: some View {
         VStack{
             VStack{
@@ -61,9 +69,14 @@ struct IntroView: View {
                 Text("Already_has_account".localized()).foregroundColor(.white).fontWeight(.light)
                 Button(action: {
                     
+                    showLogin.toggle()
+                    
                 }) {
                     Text("Login".localized()).foregroundColor(.mainColor).fontWeight(.semibold)
                 }
+                .sheet(isPresented: $showLogin, content: {
+                    LoginView()
+                })
             }
             .padding(.bottom, 50)
             
