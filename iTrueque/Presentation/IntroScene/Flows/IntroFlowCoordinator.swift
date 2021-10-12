@@ -8,7 +8,9 @@
 import UIKit
 
 protocol IntroFlowCoordinatorDependencies {
-    func makeIntroViewController() -> UIViewController
+    func makeIntroViewController(coordinatorActions: IntroViewModelActions) -> UIViewController
+    func makeHomeViewController()  -> UIViewController
+
 }
 
 final class IntroFlowCoordinator {
@@ -25,8 +27,16 @@ final class IntroFlowCoordinator {
     }
     
     func start() {
-        let viewController = dependencies.makeIntroViewController()
+        let coordinatorActions = IntroViewModelActions(showHome: showHome)
+        let viewController = dependencies.makeIntroViewController(coordinatorActions: coordinatorActions)
         navigationController?.pushViewController(viewController, animated: false)
     }
+    
+    func showHome(){
+        let viewController = dependencies.makeHomeViewController()
+        navigationController?.setViewControllers([viewController], animated: false)
+    }
+    
+    
     
 }

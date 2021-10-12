@@ -20,7 +20,7 @@ final class IntroSceneDIContainer {
         self.dependencies = dependencies
     }
     
-    func makeIntroViewController() -> UIViewController {
+    func makeIntroViewController(coordinatorActions: IntroViewModelActions) -> UIViewController {
         let view = IntroView()
         return UIHostingController(rootView: view)
     }
@@ -29,6 +29,10 @@ final class IntroSceneDIContainer {
         return IntroFlowCoordinator(navigationController: navigationController, dependencies: self)
     }
     
+    func makeHomeViewController() -> UIViewController {
+        let view = TabBarView()
+        return UIHostingController(rootView: view)
+    }
 }
 
 extension IntroSceneDIContainer: IntroFlowCoordinatorDependencies {}
