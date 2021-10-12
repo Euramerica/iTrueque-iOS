@@ -14,3 +14,6 @@
 "Email"                     = "Correo electronico";
 "Password"                  = "Contraseña";
 "Forgot_password"           = "¿Has olvidado la contraseña?";
+"Your_name"                 = "Tu nombre de usuario";
+"Register_user"             = "Crear cuenta";
+"New_account"               = "Creando nueva cuenta";

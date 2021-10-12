@@ -49,7 +49,7 @@ struct IntroView: View {
             .padding(.bottom, 5)
             
             Button(action: {
-                
+                showRegiter.toggle()
             }) {
                 HStack(spacing: 70){
                     Image(systemName: "mail").foregroundColor(.white)
@@ -64,6 +64,11 @@ struct IntroView: View {
             .padding(.leading, 15)
             .padding(.trailing, 15)
             .padding(.bottom, 50)
+            .sheet(isPresented: $showRegiter, content: {
+                RegisterView()
+            })
+            
+            
             
             HStack{
                 Text("Already_has_account".localized()).foregroundColor(.white).fontWeight(.light)
