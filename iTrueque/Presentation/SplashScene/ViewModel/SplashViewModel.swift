@@ -47,6 +47,7 @@ enum SplashAction {
 class SplashViewModel: ViewModel {
     
     private let getStoredLogin: GetStoredLogin
+    private let storeLogin = StoreLogin()
     private let verifyStoredLogin: VerifyStoredLogin
     private let coordinatorActions: SplashViewModelActions?
     private var cancellableSet: Set<AnyCancellable> = []
@@ -59,6 +60,7 @@ class SplashViewModel: ViewModel {
     init(state: SplashState, getStoredLogin: GetStoredLogin, verifyStoredLogin: VerifyStoredLogin, coordinatorActions: SplashViewModelActions? = nil) {
         self.state = state
         self.getStoredLogin = getStoredLogin
+        
         self.verifyStoredLogin = verifyStoredLogin
         self.coordinatorActions = coordinatorActions
         self.state.changeViewModelState(newViewModelState: .loading)
@@ -92,6 +94,7 @@ class SplashViewModel: ViewModel {
                         self?.coordinatorActions?.showIntro()
                     }
                 } receiveValue: { [weak self] user in
+                    self?.storeLogin.execute(user)
                     self?.coordinatorActions?.showHome()
                 }
                 .store(in: &cancellableSet)
