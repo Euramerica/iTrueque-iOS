@@ -28,8 +28,10 @@ final class SplashSceneDIContainer {
         return UIHostingController(rootView: view)
     }
     
-    func makeIntroViewController() -> UIViewController {
-        let view = IntroView()
+    func makeIntroViewController(coordinatorActions: IntroViewModelActions) -> UIViewController {
+        
+        let viewModel = IntroViewModel(state: IntroState(), verifyStoredLogin: VerifyStoredLogin(), coordinatorActions: coordinatorActions)
+        let view = IntroView().environmentObject(AnyViewModel(viewModel))
         return UIHostingController(rootView: view)
     }
     
