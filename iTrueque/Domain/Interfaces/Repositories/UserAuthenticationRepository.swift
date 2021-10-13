@@ -11,12 +11,15 @@ import FirebaseAuth
 
 final class UserAuthenticationRepository {
     
+    private let keyChainDataSource = KeyChainDataSource()
+    
     func getStoredLogin() -> AnyPublisher<StoredLogin ,Error> {
-        //valores mockeados
-        //TODO: conectar con keychain para recuperar los valores
-        let storedLogin = StoredLogin(email: "osvcha@gmailm.com", password: "itruequem")
-        return Just(storedLogin)
-            .setFailureType(to: Error.self)
+        keyChainDataSource.getStoredLogin()
+            .eraseToAnyPublisher()
+    }
+    
+    func storeLogin(_ user: UserApp) ->AnyPublisher<Void, Error> {
+        keyChainDataSource.storeLogin(user)
             .eraseToAnyPublisher()
     }
    

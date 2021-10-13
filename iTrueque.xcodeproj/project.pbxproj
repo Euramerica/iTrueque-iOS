@@ -37,6 +37,8 @@
 		2DBCDED027010E9500C42E32 /* TabBarFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDECF27010E9500C42E32 /* TabBarFlowCoordinator.swift */; };
 		2DBCDED227010EA000C42E32 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDED127010EA000C42E32 /* TabBarViewModel.swift */; };
 		2DBCDED427010EAF00C42E32 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDED327010EAF00C42E32 /* TabBarView.swift */; };
+		2DF302DD2714539300F67242 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 2DF302DC2714539300F67242 /* KeychainAccess */; };
+		2DF302E22714598A00F67242 /* UserStoredDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF302E12714598A00F67242 /* UserStoredDataSource.swift */; };
 		D4ACDCFC27155C230002BC18 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACDCFB27155C230002BC18 /* LoginView.swift */; };
 		D4ACDCFE2715630E0002BC18 /* ModelDataState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACDCFD2715630E0002BC18 /* ModelDataState.swift */; };
 		D4ACDD00271566C90002BC18 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACDCFF271566C90002BC18 /* RegisterView.swift */; };
@@ -86,6 +88,7 @@
 		2DBCDECF27010E9500C42E32 /* TabBarFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFlowCoordinator.swift; sourceTree = "<group>"; };
 		2DBCDED127010EA000C42E32 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		2DBCDED327010EAF00C42E32 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		2DF302E12714598A00F67242 /* UserStoredDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStoredDataSource.swift; sourceTree = "<group>"; };
 		D4ACDCFB27155C230002BC18 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D4ACDCFD2715630E0002BC18 /* ModelDataState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataState.swift; sourceTree = "<group>"; };
 		D4ACDCFF271566C90002BC18 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -101,6 +104,7 @@
 				D4E183D427039916000A3EFD /* FirebaseFirestoreSwift-Beta in Frameworks */,
 				D4E183DC27039916000A3EFD /* FirebaseMessaging in Frameworks */,
 				D4E183DE27039916000A3EFD /* FirebaseFunctions in Frameworks */,
+				2DF302DD2714539300F67242 /* KeychainAccess in Frameworks */,
 				D4E183E027039916000A3EFD /* FirebaseAuth in Frameworks */,
 				D4E183D627039916000A3EFD /* FirebaseStorageSwift-Beta in Frameworks */,
 				D4E183D227039916000A3EFD /* FirebaseDatabase in Frameworks */,
@@ -204,6 +208,8 @@
 		2D5E8DF4270A6E1100F92594 /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				2DF302DF2714594000F67242 /* LocalDataSources */,
+				2DF302E02714595D00F67242 /* RemoteDataSources */,
 				2DB34984270BAF7F00CB63F9 /* Repositories */,
 			);
 			path = Interfaces;
@@ -394,6 +400,21 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		2DF302DF2714594000F67242 /* LocalDataSources */ = {
+			isa = PBXGroup;
+			children = (
+				2DF302E12714598A00F67242 /* UserStoredDataSource.swift */,
+			);
+			path = LocalDataSources;
+			sourceTree = "<group>";
+		};
+		2DF302E02714595D00F67242 /* RemoteDataSources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RemoteDataSources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -420,6 +441,7 @@
 				D4E183DB27039916000A3EFD /* FirebaseMessaging */,
 				D4E183DD27039916000A3EFD /* FirebaseFunctions */,
 				D4E183DF27039916000A3EFD /* FirebaseAuth */,
+				2DF302DC2714539300F67242 /* KeychainAccess */,
 			);
 			productName = iTrueque;
 			productReference = 2DBCDEA627010D3200C42E32 /* iTrueque.app */;
@@ -451,6 +473,7 @@
 			mainGroup = 2DBCDE9D27010D3200C42E32;
 			packageReferences = (
 				D4E183CE27039916000A3EFD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				2DF302DB2714539300F67242 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = 2DBCDEA727010D3200C42E32 /* Products */;
 			projectDirPath = "";
@@ -505,6 +528,7 @@
 				2DABC7B127039875009AAE88 /* Color.swift in Sources */,
 				2D5E8DF22709C7E700F92594 /* ViewModel.swift in Sources */,
 				2DBCDEC427010E0200C42E32 /* AppFlowCoordinator.swift in Sources */,
+				2DF302E22714598A00F67242 /* UserStoredDataSource.swift in Sources */,
 				2DBCDEC227010DE200C42E32 /* AppConfiguration.swift in Sources */,
 				2DBCDED027010E9500C42E32 /* TabBarFlowCoordinator.swift in Sources */,
 				2D5E8DEF2709C10600F92594 /* SplashSceneDIContainer.swift in Sources */,
@@ -720,6 +744,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2DF302DB2714539300F67242 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		D4E183CE27039916000A3EFD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -731,6 +763,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2DF302DC2714539300F67242 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2DF302DB2714539300F67242 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
 		D4E183CF27039916000A3EFD /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D4E183CE27039916000A3EFD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
