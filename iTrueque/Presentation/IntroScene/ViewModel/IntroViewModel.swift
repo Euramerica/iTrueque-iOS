@@ -38,16 +38,16 @@ class IntroViewModel: ViewModel{
     var state: IntroState
     
     //Stored properties
-    private let verifyStoredLogin: VerifyStoredLogin
+    private let performLogin: PerformLogin
     private let createNewUser: CreateNewUser
     private let coordinatorActions: IntroViewModelActions?
     
     private var cancellableSet: Set<AnyCancellable> = []
     
-    init(state: IntroState, verifyStoredLogin: VerifyStoredLogin, createNewUser: CreateNewUser, coordinatorActions: IntroViewModelActions? = nil) {
+    init(state: IntroState,                                        performLogin: PerformLogin, createNewUser: CreateNewUser, coordinatorActions: IntroViewModelActions? = nil) {
         
         self.state = state
-        self.verifyStoredLogin = verifyStoredLogin
+        self.performLogin =                                        performLogin
         self.createNewUser = createNewUser
         self.coordinatorActions = coordinatorActions
         self.state.changeViewModelState(newViewModelState: .loading)
@@ -76,7 +76,7 @@ class IntroViewModel: ViewModel{
             
         
         case .doLogin(let email, let password):
-            verifyStoredLogin.execute(email: email, password: password)
+            performLogin.execute(email: email, password: password)
                 .sink { [weak self] completion in
                     switch completion {
                     case .finished:

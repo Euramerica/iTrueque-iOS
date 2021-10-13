@@ -22,8 +22,8 @@ final class SplashSceneDIContainer {
     
     func makeSplashViewController(coordinatorActions: SplashViewModelActions) -> UIViewController {
         let getStoredLogin = GetStoredLogin()
-        let verifyStoredLogin = VerifyStoredLogin()
-        let viewModel = SplashViewModel(state: SplashState(), getStoredLogin: getStoredLogin, verifyStoredLogin: verifyStoredLogin, coordinatorActions: coordinatorActions)
+        let performLogin = PerformLogin()
+        let viewModel = SplashViewModel(state: SplashState(), getStoredLogin: getStoredLogin, performLogin: performLogin, coordinatorActions: coordinatorActions)
         let view = SplashView().environmentObject(AnyViewModel(viewModel))
         return UIHostingController(rootView: view)
     }
@@ -31,7 +31,7 @@ final class SplashSceneDIContainer {
     func makeIntroViewController(coordinatorActions: IntroViewModelActions) -> UIViewController {
         
         let viewModel = IntroViewModel(state: IntroState(),
-                                       verifyStoredLogin: VerifyStoredLogin(),
+                                       performLogin: PerformLogin(),
                                        createNewUser: CreateNewUser(),
                                        coordinatorActions: coordinatorActions
         )

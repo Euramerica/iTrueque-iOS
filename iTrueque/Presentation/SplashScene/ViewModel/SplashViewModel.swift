@@ -31,7 +31,7 @@ class SplashViewModel: ViewModel {
     
     private let getStoredLogin: GetStoredLogin
     private let storeLogin = StoreLogin()
-    private let verifyStoredLogin: VerifyStoredLogin
+    private let performLogin: PerformLogin
     private let coordinatorActions: SplashViewModelActions?
     private var cancellableSet: Set<AnyCancellable> = []
     private var email: String = ""
@@ -40,11 +40,11 @@ class SplashViewModel: ViewModel {
     @Published
     var state: SplashState
     
-    init(state: SplashState, getStoredLogin: GetStoredLogin, verifyStoredLogin: VerifyStoredLogin, coordinatorActions: SplashViewModelActions? = nil) {
+    init(state: SplashState, getStoredLogin: GetStoredLogin, performLogin: PerformLogin, coordinatorActions: SplashViewModelActions? = nil) {
         self.state = state
         self.getStoredLogin = getStoredLogin
         
-        self.verifyStoredLogin = verifyStoredLogin
+        self.performLogin = performLogin
         self.coordinatorActions = coordinatorActions
         self.state.changeViewModelState(newViewModelState: .loading)
     }
@@ -68,7 +68,7 @@ class SplashViewModel: ViewModel {
                 .store(in: &cancellableSet)
         
         case .doLogin:
-            verifyStoredLogin.execute(email: self.email, password: self.password)
+            performLogin.execute(email: self.email, password: self.password)
                 .sink { [weak self] completion in
                     switch completion {
                     case .finished:

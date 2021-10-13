@@ -16,7 +16,7 @@
 		2D5E8DEF2709C10600F92594 /* SplashSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5E8DEE2709C10600F92594 /* SplashSceneDIContainer.swift */; };
 		2D5E8DF22709C7E700F92594 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5E8DF12709C7E700F92594 /* ViewModel.swift */; };
 		2D5E8DFC270A6EEC00F92594 /* GetStoredLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5E8DFB270A6EEC00F92594 /* GetStoredLoginUseCase.swift */; };
-		2D5E8DFE270A6F0C00F92594 /* VerifyStoredLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5E8DFD270A6F0C00F92594 /* VerifyStoredLoginUseCase.swift */; };
+		2D5E8DFE270A6F0C00F92594 /* PerformLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5E8DFD270A6F0C00F92594 /* PerformLoginUseCase.swift */; };
 		2DABC7A927039152009AAE88 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DABC7AB27039152009AAE88 /* Localizable.strings */; };
 		2DABC7AF27039306009AAE88 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DABC7AE27039306009AAE88 /* String.swift */; };
 		2DABC7B127039875009AAE88 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DABC7B027039875009AAE88 /* Color.swift */; };
@@ -64,7 +64,7 @@
 		2D5E8DEE2709C10600F92594 /* SplashSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashSceneDIContainer.swift; sourceTree = "<group>"; };
 		2D5E8DF12709C7E700F92594 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		2D5E8DFB270A6EEC00F92594 /* GetStoredLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStoredLoginUseCase.swift; sourceTree = "<group>"; };
-		2D5E8DFD270A6F0C00F92594 /* VerifyStoredLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyStoredLoginUseCase.swift; sourceTree = "<group>"; };
+		2D5E8DFD270A6F0C00F92594 /* PerformLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformLoginUseCase.swift; sourceTree = "<group>"; };
 		2DABC7AA27039152009AAE88 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2DABC7AC2703916A009AAE88 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2DABC7AE27039306009AAE88 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -219,7 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				2D5E8DFB270A6EEC00F92594 /* GetStoredLoginUseCase.swift */,
-				2D5E8DFD270A6F0C00F92594 /* VerifyStoredLoginUseCase.swift */,
+				2D5E8DFD270A6F0C00F92594 /* PerformLoginUseCase.swift */,
 				D4ACDD012715D5170002BC18 /* CreateNewUserUseCase.swift */,
 			);
 			path = UseCases;
@@ -508,7 +508,7 @@
 				2DABC7B32703CA0C009AAE88 /* IntroSceneDIContainer.swift in Sources */,
 				2DBCDEAA27010D3200C42E32 /* AppDelegate.swift in Sources */,
 				2D5E8DE927099B8B00F92594 /* SplashView.swift in Sources */,
-				2D5E8DFE270A6F0C00F92594 /* VerifyStoredLoginUseCase.swift in Sources */,
+				2D5E8DFE270A6F0C00F92594 /* PerformLoginUseCase.swift in Sources */,
 				2D5E8DED27099BAA00F92594 /* SplashFlowCoordinator.swift in Sources */,
 				2D5E8DEB27099B9600F92594 /* SplashViewModel.swift in Sources */,
 				2DB4650D270D0121007705A7 /* UserApp.swift in Sources */,
