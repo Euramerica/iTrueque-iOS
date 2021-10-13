@@ -15,6 +15,8 @@ struct IntroViewModelActions {
 
 struct IntroState {
     var dataState: ModelDataState = .idle
+    var isLogin: Bool = false
+    var isRegister: Bool = false
     mutating func changeViewModelState(newViewModelState: ModelDataState) {
         dataState = newViewModelState
     }
@@ -24,20 +26,22 @@ struct IntroState {
 enum IntroAction{
     case createNewUser(userName: String, email: String, password: String)
     case doLogin(email: String, password: String)
+    case showLogin
+    case hideLogin
+    case showRegister
+    case hideRegister
 }
 
 class IntroViewModel: ViewModel{
     
-    //Wrapped properties
-    @State var state: IntroState
+    @Published
+    var state: IntroState
     
-
     //Stored properties
     private let verifyStoredLogin: VerifyStoredLogin
     private let createNewUser: CreateNewUser
     private let coordinatorActions: IntroViewModelActions?
     
-    //
     private var cancellableSet: Set<AnyCancellable> = []
     
     init(state: IntroState, verifyStoredLogin: VerifyStoredLogin, createNewUser: CreateNewUser, coordinatorActions: IntroViewModelActions? = nil) {
@@ -71,21 +75,31 @@ class IntroViewModel: ViewModel{
 
             
         
-        //
         case .doLogin(let email, let password):
             verifyStoredLogin.execute(email: email, password: password)
                 .sink { [weak self] completion in
                     switch completion {
                     case .finished:
                         break
-                    case .failure(_):
-                    print("failed!")
+                    case .failure(let error):
+                        print(error.localizedDescription)
                     }
                 } receiveValue: { [weak self] user in
                     self?.coordinatorActions?.showHome()
                 }
                 .store(in: &cancellableSet)
 
+        case .showLogin:
+            self.state.isLogin = true
+            
+        case .showRegister:
+            self.state.isRegister = true
+            
+        case .hideLogin:
+            self.state.isLogin = false
+            
+        case .hideRegister:
+            self.state.isRegister = false
         }
     }
     

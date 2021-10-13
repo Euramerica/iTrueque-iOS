@@ -9,10 +9,6 @@ import SwiftUI
 
 struct IntroView: View {
     
-    
-    //Wrapped properties
-    @State private var isLogin: Bool   = false
-    @State private var isRegister: Bool = false
     @EnvironmentObject var viewModel: AnyViewModel<IntroState, IntroAction>
     
     var body: some View {
@@ -47,7 +43,7 @@ struct IntroView: View {
             .padding(.bottom, 5)
             
             Button(action: {
-                isRegister.toggle()
+                viewModel.handle(.showRegister)
             }) {
                 HStack(spacing: 70){
                     Image(systemName: "mail").foregroundColor(.white)
@@ -62,24 +58,36 @@ struct IntroView: View {
             .padding(.leading, 15)
             .padding(.trailing, 15)
             .padding(.bottom, 50)
-            .sheet(isPresented: $isRegister, content: {
-                RegisterView()
-            })
+            .sheet(isPresented:
+                Binding(get: {
+                    viewModel.state.isRegister
+                }, set: {_ in
+                    viewModel.handle(.hideRegister)
+                })
+                , content: {
+                    RegisterView()
+                }
+            )
             
             
             
             HStack{
                 Text("Already_has_account".localized()).foregroundColor(.white).fontWeight(.light)
                 Button(action: {
-                    isLogin.toggle()
+                    viewModel.handle(.showLogin)
                 }) {
                     Text("Login".localized()).foregroundColor(.mainColor).fontWeight(.semibold)
                 }
-                .sheet(isPresented: $isLogin, content: {
-                    LoginView(dissmiss: $isLogin)
-                })
-                
-
+                .sheet(isPresented:
+                    Binding(get: {
+                        viewModel.state.isLogin
+                    }, set: {_ in
+                        viewModel.handle(.hideLogin)
+                    })
+                    , content: {
+                        LoginView()
+                    }
+                )
             }
             .padding(.bottom, 50)
             

@@ -8,27 +8,21 @@
 import SwiftUI
 
 struct LoginView: View {
-    
-    //
     @State private var email:       String = ""
     @State private var password:    String = ""
     @State private var isEditing:   Bool = false
-    @Binding var dissmiss: Bool
-    
     
     //ViewModel
     @EnvironmentObject var viewModel: AnyViewModel<IntroState, IntroAction>
     
     var body: some View {
         VStack{
-            
             HStack(alignment: .firstTextBaseline){
-                
                 Text("Login".localized())
                     .padding(.top, 16)
                 Spacer()
                 Button {
-                    dissmiss.toggle()
+                    viewModel.handle(.hideLogin)
                 } label: {
                     Image(systemName: "xmark.square.fill")
                         .resizable()
@@ -38,8 +32,6 @@ struct LoginView: View {
             }
             .padding(.horizontal, 16)
 
-        
-            
             VStack {
                 TextField("Email".localized(), text: $email) { currentEditState in
                     self.isEditing = currentEditState
@@ -104,6 +96,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(dissmiss: .constant(false))
+        LoginView()
     }
 }

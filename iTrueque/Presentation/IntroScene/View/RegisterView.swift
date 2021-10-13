@@ -21,12 +21,23 @@ struct RegisterView: View {
     
     var body: some View {
         VStack{
-            Text("New_account".localized())
-                .padding(.top, 16)
+            HStack(alignment: .firstTextBaseline){
+                Text("New_account".localized())
+                    .padding(.top, 16)
+                Spacer()
+                Button {
+                    viewModel.handle(.hideRegister)
+                } label: {
+                    Image(systemName: "xmark.square.fill")
+                        .resizable()
+                        .frame(width: 32, height: 32)
+                        .foregroundColor(.mainColor)
+                }
+            }
+            .padding(.horizontal, 16)
         
             VStack {
-                TextField("Your_name".localized(), text: $userName
-    ) { currentEditState in
+                TextField("Your_name".localized(), text: $userName) { currentEditState in
                     self.isEditing = currentEditState
                 }
                 .padding(.horizontal)
