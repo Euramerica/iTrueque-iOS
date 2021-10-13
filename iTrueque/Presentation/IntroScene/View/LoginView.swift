@@ -36,6 +36,8 @@ struct LoginView: View {
                 TextField("Email".localized(), text: $email) { currentEditState in
                     self.isEditing = currentEditState
                 }
+                .disableAutocorrection(true)
+                .autocapitalization(.none)
                 .padding(.horizontal)
                 .frame(height: 56)
                 .background(
@@ -46,6 +48,8 @@ struct LoginView: View {
                 TextField("Password".localized(), text: $password) { currentEditState in
                     self.isEditing = currentEditState
                 }
+                .disableAutocorrection(true)
+                .autocapitalization(.none)
                 .padding(.horizontal)
                 .frame(height: 56)
                 .background(

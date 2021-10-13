@@ -40,6 +40,8 @@ struct RegisterView: View {
                 TextField("Your_name".localized(), text: $userName) { currentEditState in
                     self.isEditing = currentEditState
                 }
+                .disableAutocorrection(true)
+                .autocapitalization(.none)
                 .padding(.horizontal)
                 .frame(height: 56)
                 .background(
@@ -50,6 +52,8 @@ struct RegisterView: View {
                 TextField("Email".localized(), text: $email) { currentEditState in
                     self.isEditing = currentEditState
                 }
+                .disableAutocorrection(true)
+                .autocapitalization(.none)
                 .padding(.horizontal)
                 .frame(height: 56)
                 .background(
@@ -60,6 +64,8 @@ struct RegisterView: View {
                 TextField("Password".localized(), text: $password) { currentEditState in
                     self.isEditing = currentEditState
                 }
+                .disableAutocorrection(true)
+                .autocapitalization(.none)
                 .padding(.horizontal)
                 .frame(height: 56)
                 .background(
