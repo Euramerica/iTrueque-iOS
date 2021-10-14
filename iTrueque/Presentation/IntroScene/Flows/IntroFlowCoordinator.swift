@@ -34,7 +34,7 @@ final class IntroFlowCoordinator {
     
     func showHome(){
         let viewController = dependencies.makeHomeViewController()
-        navigationController?.setViewControllers([viewController], animated: false)
+        navigationController?.setViewControllers([viewController], animated: true)
     }
     
     

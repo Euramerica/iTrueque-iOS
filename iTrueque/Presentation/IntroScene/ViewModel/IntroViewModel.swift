@@ -5,7 +5,6 @@
 //  Created by Osvaldo Chaparro Bolaños on 27/9/21.
 //
 
-import Foundation
 import Combine
 import SwiftUI
 
@@ -30,6 +29,7 @@ enum IntroAction{
     case hideLogin
     case showRegister
     case hideRegister
+    case goToHome
 }
 
 class IntroViewModel: ViewModel{
@@ -41,18 +41,21 @@ class IntroViewModel: ViewModel{
     private let performLogin: PerformLogin
     private let createNewUser: CreateNewUser
     private let coordinatorActions: IntroViewModelActions?
+    private let storeLogin = StoreLogin()
     
     private var cancellableSet: Set<AnyCancellable> = []
     
-    init(state: IntroState,                                        performLogin: PerformLogin, createNewUser: CreateNewUser, coordinatorActions: IntroViewModelActions? = nil) {
-        
+    init(state: IntroState,
+         performLogin: PerformLogin,
+         createNewUser: CreateNewUser,
+         coordinatorActions: IntroViewModelActions? = nil)
+    {
         self.state = state
-        self.performLogin =                                        performLogin
+        self.performLogin = performLogin
         self.createNewUser = createNewUser
         self.coordinatorActions = coordinatorActions
         self.state.changeViewModelState(newViewModelState: .loading)
     }
-    
     
     func handle(_ action: IntroAction) {
         switch action{
@@ -60,17 +63,13 @@ class IntroViewModel: ViewModel{
             createNewUser.execute(userName: userName, email: email, password: password)
                 .sink { [weak self] result in
                     switch result{
-                    
                     case .finished:
                         self?.coordinatorActions?.showHome()
                     case .failure(_):
                         print("failed!")
                     }
-                    
-                    
                 } receiveValue: { user in
                     print(user.email)
-                   
                 }.store(in: &cancellableSet)
 
             
@@ -80,12 +79,17 @@ class IntroViewModel: ViewModel{
                 .sink { [weak self] completion in
                     switch completion {
                     case .finished:
-                        break
+                        self?.state.isLogin = false
                     case .failure(let error):
                         print(error.localizedDescription)
                     }
                 } receiveValue: { [weak self] user in
-                    self?.coordinatorActions?.showHome()
+                    self?.storeLogin.execute(user)
+                    self?.handle(.hideLogin)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        self?.handle(.goToHome)
+                    }
+                    
                 }
                 .store(in: &cancellableSet)
 
@@ -100,6 +104,9 @@ class IntroViewModel: ViewModel{
             
         case .hideRegister:
             self.state.isRegister = false
+        
+        case .goToHome:
+            coordinatorActions?.showHome()
         }
     }
     
