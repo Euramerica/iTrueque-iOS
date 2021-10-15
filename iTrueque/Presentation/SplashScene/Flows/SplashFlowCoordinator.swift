@@ -9,7 +9,7 @@ import UIKit
 
 protocol SplashFlowCoordinatorDependencies {
     func makeSplashViewController(coordinatorActions: SplashViewModelActions) -> UIViewController
-    func makeIntroViewController() -> UIViewController
+    func makeIntroViewController(coordinatorActions: IntroViewModelActions) -> UIViewController
     func makeHomeViewController() -> UIViewController
 }
 
@@ -33,7 +33,7 @@ final class SplashFlowCoordinator {
     }
     
     private func showIntroScene() {
-        let viewController = dependencies.makeIntroViewController()
+        let viewController = dependencies.makeIntroViewController(coordinatorActions: IntroViewModelActions(showHome: showHomeScene))
         navigationController?.setViewControllers([viewController], animated: false)
     }
     
