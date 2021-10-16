@@ -21,7 +21,13 @@ final class IntroSceneDIContainer {
     }
     
     func makeIntroViewController(coordinatorActions: IntroViewModelActions) -> UIViewController {
-        let view = IntroView()
+        let viewModel = IntroViewModel(state: IntroState(),
+                                       performLogin: PerformLogin(),
+                                       createNewUser: CreateNewUser(),
+                                       coordinatorActions: coordinatorActions
+        )
+        
+        let view = IntroView().environmentObject(AnyViewModel(viewModel))
         return UIHostingController(rootView: view)
     }
     
@@ -29,8 +35,13 @@ final class IntroSceneDIContainer {
         return IntroFlowCoordinator(navigationController: navigationController, dependencies: self)
     }
     
-    func makeHomeViewController() -> UIViewController {
-        let view = TabBarView()
+    func makeTabBarViewController(coordinatorActions: TabBarViewModelActions) -> UIViewController {
+        let profileScreenViewModel = ProfileViewModel(state: ProfileState(), coordinatorActions: coordinatorActions)
+        let viewModel = TabBarViewModel(state: TabBarState(),
+                                        coordinatorActions: coordinatorActions,
+                                        profileScreenViewModel: profileScreenViewModel
+        )
+        let view = TabBarView().environmentObject(AnyViewModel(viewModel))
         return UIHostingController(rootView: view)
     }
 }

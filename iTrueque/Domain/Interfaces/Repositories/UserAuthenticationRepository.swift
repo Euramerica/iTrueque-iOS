@@ -22,6 +22,11 @@ final class UserAuthenticationRepository {
         keyChainDataSource.storeLogin(user)
             .eraseToAnyPublisher()
     }
+    
+    func removeStoredLogin() -> AnyPublisher<Void, Error> {
+        keyChainDataSource.removeStoredLogin()
+            .eraseToAnyPublisher()
+    }
    
     func doLogin(email: String, password: String) -> AnyPublisher<UserApp, Error> {
         Deferred {
