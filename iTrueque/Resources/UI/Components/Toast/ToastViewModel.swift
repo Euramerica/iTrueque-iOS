@@ -19,7 +19,7 @@ class ToastViewModel: ToastViewViewModel {
     private var timer: Timer?
     private let presentationDuration: TimeInterval
 
-    init(_ state: Binding<ToastState>, presentationDuration: TimeInterval = 3.0) {
+    init(_ state: Binding<ToastState>, presentationDuration: TimeInterval = 4.0) {
         _state = state
         self.presentationDuration = presentationDuration
     }
