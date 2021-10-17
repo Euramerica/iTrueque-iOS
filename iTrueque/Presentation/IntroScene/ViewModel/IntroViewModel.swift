@@ -66,12 +66,12 @@ class IntroViewModel: ViewModel{
         switch action{
         case .createNewUser(let name, let surname, email: let email, password: let password):
             createNewUser.execute(name: name, surname: surname, email: email, password: password)
-                .sink { result in
+                .sink { [weak self] result in
                     switch result{
                     case .finished:
-                        print("finish!")
-                    case .failure(_):
-                        print("failed!")
+                        self?.state.isRegister = false
+                    case .failure(let error):
+                        self?.state.loginToast = .failure(error.localizedDescription, "")
                     }
                 } receiveValue: { [weak self] user in
                     self?.handle(._createNewUserDatabase(user: user))
@@ -86,8 +86,8 @@ class IntroViewModel: ViewModel{
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
                             self?.coordinatorActions?.showHome()
                         }
-                    case .failure(_):
-                        print("failed!")
+                    case .failure(let error):
+                        self?.state.loginToast = .failure(error.localizedDescription, "")
                     }
                 } receiveValue: { user in
                     print("_createNewUserDatabase - after use case")
