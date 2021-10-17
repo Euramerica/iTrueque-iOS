@@ -25,7 +25,8 @@ struct IntroState {
 
 
 enum IntroAction{
-    case createNewUser(userName: String, email: String, password: String)
+    case createNewUser(name: String, surname: String, email: String, password: String)
+    case _createNewUserDatabase(user: UserApp)
     case doLogin(email: String, password: String)
     case showLogin
     case hideLogin
@@ -43,6 +44,7 @@ class IntroViewModel: ViewModel{
     //Stored properties
     private let performLogin: PerformLogin
     private let createNewUser: CreateNewUser
+    private let createNewUserDatabase = CreateNewUserDatabase()
     private let coordinatorActions: IntroViewModelActions?
     private let storeLogin = StoreLogin()
     
@@ -62,17 +64,34 @@ class IntroViewModel: ViewModel{
     
     func handle(_ action: IntroAction) {
         switch action{
-        case .createNewUser(let userName, email: let email, password: let password):
-            createNewUser.execute(userName: userName, email: email, password: password)
+        case .createNewUser(let name, let surname, email: let email, password: let password):
+            createNewUser.execute(name: name, surname: surname, email: email, password: password)
                 .sink { [weak self] result in
                     switch result{
                     case .finished:
-                        self?.coordinatorActions?.showHome()
-                    case .failure(_):
-                        print("failed!")
+                        self?.state.isRegister = false
+                    case .failure(let error):
+                        self?.state.loginToast = .failure(error.localizedDescription, "")
+                    }
+                } receiveValue: { [weak self] user in
+                    self?.handle(._createNewUserDatabase(user: user))
+                }.store(in: &cancellableSet)
+
+        case ._createNewUserDatabase(let user):
+            createNewUserDatabase.execute(user: user)
+                .sink { [weak self] result in
+                    switch result{
+                    case .finished:
+                        self?.handle(.hideRegister)
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                            self?.coordinatorActions?.showHome()
+                        }
+                    case .failure(let error):
+                        self?.state.loginToast = .failure(error.localizedDescription, "")
                     }
                 } receiveValue: { user in
-                    print(user.email)
+                    print("_createNewUserDatabase - after use case")
+                    print(user)
                 }.store(in: &cancellableSet)
 
             
@@ -128,6 +147,7 @@ class IntroViewModel: ViewModel{
             
         case .setLoginToast(let toast):
             state.loginToast = toast
+        
         }
     }
     

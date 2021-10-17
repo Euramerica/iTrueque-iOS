@@ -14,9 +14,17 @@
 "Email"                     = "Correo electronico";
 "Password"                  = "Contraseña";
 "Forgot_password"           = "¿Has olvidado la contraseña?";
-"Your_name"                 = "Tu nombre de usuario";
 "Register_user"             = "Crear cuenta";
 "New_account"               = "Creando nueva cuenta";
 "Read_today"                = "¿Que te apetece leer hoy?";
 "Latest"                    = "Recientes";
 "Popular"                   = "Populates";
+
+//MARK: - SingIn
+"All_fields_mandatory"      = "Todos los campos son obligatorios.";
+
+//MARK: - SignUp
+"Your_name"                 = "Tu nombre";
+"Your_surname"              = "Tus apellidos";
+"Confirm_password"          = "Confirma la contraseña";
+"Confirm_password_valid"    = "Las contraseñas no son iguales";

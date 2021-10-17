@@ -12,8 +12,8 @@ public final class CreateNewUser{
     
     private let repository = UserAuthenticationRepository()
     
-    func execute(userName: String, email: String, password: String) -> AnyPublisher<UserApp, Error>{
-        repository.createUser(userName: userName, email: email, password: password)
+    func execute(name: String, surname: String, email: String, password: String) -> AnyPublisher<UserApp, Error>{
+        repository.createUser(name: name, surname: surname, email: email, password: password)
             .eraseToAnyPublisher()
     }
     
