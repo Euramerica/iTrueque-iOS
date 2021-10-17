@@ -45,7 +45,7 @@ struct ToastModifier<ViewModel: ToastViewViewModel>: ViewModifier {
         }
 
         if case .failure(let title, let messasge) = viewModel.state {
-            Toast(title: title, subtitle: messasge, accentColor: Color.mainColor)
+            Toast(title: title, subtitle: messasge, accentColor: Color.errorColor)
         }
     }
 }

@@ -17,3 +17,6 @@
 "Your_name"                 = "Tu nombre de usuario";
 "Register_user"             = "Crear cuenta";
 "New_account"               = "Creando nueva cuenta";
+
+//MARK: - Login
+"All_fields_mandatory"      = "Todos los campos son obligatorios.";

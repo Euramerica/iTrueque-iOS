@@ -40,7 +40,7 @@ public struct Toast: View {
                 }
                 Spacer()
             }
-        }.foregroundColor(.mainColor)
+        }.foregroundColor(.bodyColorDark)
             .overlay(
                 RoundedRectangle(cornerRadius: 16.0)
                     .stroke(accentColor, lineWidth: 1)

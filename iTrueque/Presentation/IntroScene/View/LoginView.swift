@@ -71,7 +71,9 @@ struct LoginView: View {
             
             Button(action: {
                 
-                guard !email.isEmpty, !password.isEmpty else { return }
+                guard !email.isEmpty, !password.isEmpty else {
+                    return viewModel.handle(.setLoginToast(.failure("All_fields_mandatory".localized(), "")))
+                }
                 viewModel.handle(.doLogin(email: email, password: password))
                 
             }, label: {
