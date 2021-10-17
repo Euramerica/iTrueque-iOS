@@ -21,8 +21,24 @@ final class TabBarSceneDIContainer {
     }
     
     // MARK: - Tab Bar View
-    func makeTabBarViewController() -> UIViewController {
-        let view = TabBarView()
+    func makeTabBarViewController(coordinatorActions: TabBarViewModelActions) -> UIViewController {
+        let profileScreenViewModel = ProfileViewModel(state: ProfileState(), coordinatorActions: coordinatorActions)
+        let viewModel = TabBarViewModel(state: TabBarState(),
+                                        coordinatorActions: coordinatorActions,
+                                        profileScreenViewModel: profileScreenViewModel
+        )
+        let view = TabBarView().environmentObject(AnyViewModel(viewModel))
+        return UIHostingController(rootView: view)
+    }
+    
+    func makeIntroViewController(coordinatorActions: IntroViewModelActions) -> UIViewController {
+        let viewModel = IntroViewModel(state: IntroState(),
+                                       performLogin: PerformLogin(),
+                                       createNewUser: CreateNewUser(),
+                                       coordinatorActions: coordinatorActions
+        )
+        
+        let view = IntroView().environmentObject(AnyViewModel(viewModel))
         return UIHostingController(rootView: view)
     }
     

@@ -8,7 +8,8 @@
 import UIKit
 
 protocol TabBarFlowCoordinatorDependencies {
-    func makeTabBarViewController() -> UIViewController
+    func makeIntroViewController(coordinatorActions: IntroViewModelActions) -> UIViewController
+    func makeTabBarViewController(coordinatorActions: TabBarViewModelActions) -> UIViewController
 }
 
 final class TabBarFlowCoordinator {
@@ -25,7 +26,20 @@ final class TabBarFlowCoordinator {
     }
     
     func start() {
-        let viewController = dependencies.makeTabBarViewController()
+        let coordinatorActions = TabBarViewModelActions(showIntro: showIntro)
+        let viewController = dependencies.makeTabBarViewController(coordinatorActions: coordinatorActions)
+        navigationController?.pushViewController(viewController, animated: false)
+    }
+    
+    func showHome(){
+        let coordinatorActions = TabBarViewModelActions(showIntro: showIntro)
+        let viewController = dependencies.makeTabBarViewController(coordinatorActions: coordinatorActions)
+        navigationController?.setViewControllers([viewController], animated: true)
+    }
+    
+    func showIntro(){
+        let coordinatorActions = IntroViewModelActions(showHome: showHome)
+        let viewController = dependencies.makeIntroViewController(coordinatorActions: coordinatorActions)
         navigationController?.pushViewController(viewController, animated: false)
     }
 }

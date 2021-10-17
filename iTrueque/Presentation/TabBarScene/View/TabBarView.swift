@@ -9,28 +9,41 @@ import SwiftUI
 
 struct TabBarView: View {
     
+    @EnvironmentObject var viewModel: AnyViewModel<TabBarState, TabBarAction>
+    
     var body: some View {
         TabView {
-            NavigationView{
-                Text("Home")
-            }
-            .tabItem {
-                VStack{
-                    Text("Home")
-                }
-            }
-            NavigationView{
-                Text("Config")
-            }
-            .tabItem {
-                VStack{
-                    Text("Config")
-                }
+            ForEach(viewModel.tabItemViewModels, id: \.self) { viewModel in
+                tabView(for: viewModel.type)
+                    .tabItem {
+                        Image(systemName: viewModel.imageName)
+                        Text(viewModel.title)
+                    }
             }
         }
+        
     }
     
+    @ViewBuilder
+    func tabView(for tabItemType: TabItemViewModel.TabItemType) -> some View {
+        switch tabItemType {
+        case .home:
+            Text("Home")
+            
+        case .addProduct:
+            Text("Add product")
+            
+        case .profile:
+            if let profileScreenViewModel = viewModel.state.profileScreenViewModel {
+                ProfileView().environmentObject(
+                    AnyViewModel(profileScreenViewModel)
+                )
+            }
+            
+        }
+    }
 }
+
 
 // MARK:- Preview
 struct TabBarView_Previews: PreviewProvider {
