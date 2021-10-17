@@ -28,7 +28,7 @@ struct TabBarView: View {
     func tabView(for tabItemType: TabItemViewModel.TabItemType) -> some View {
         switch tabItemType {
         case .home:
-            Text("Home")
+           HomeView()
             
         case .addProduct:
             Text("Add product")
