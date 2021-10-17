@@ -16,6 +16,9 @@
 "Forgot_password"           = "¿Has olvidado la contraseña?";
 "Register_user"             = "Crear cuenta";
 "New_account"               = "Creando nueva cuenta";
+"Read_today"                = "¿Que te apetece leer hoy?";
+"Latest"                    = "Recientes";
+"Popular"                   = "Populates";
 
 //MARK: - SingIn
 "All_fields_mandatory"      = "Todos los campos son obligatorios.";

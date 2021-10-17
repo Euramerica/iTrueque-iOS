@@ -14,4 +14,6 @@ public extension Color {
     static let bodyColorDark   = Color(#colorLiteral(red: 0.3628387537, green: 0.4154969419, blue: 0.4407355487, alpha: 1))
     static let light           = Color(#colorLiteral(red: 0.9797855299, green: 0.9797853223, blue: 0.9797857375, alpha: 1))
     static let errorColor      = Color(#colorLiteral(red: 0.937254902, green: 0.3416669433, blue: 0.1927423655, alpha: 1))
+    static let secondaryBackground  = Color(#colorLiteral(red: 0.9490196078, green: 0.9490196078, blue: 0.9490196078, alpha: 1))
+    static let textTitleColor       = Color(#colorLiteral(red: 0.1725490196, green: 0.2274509804, blue: 0.2509803922, alpha: 1))
 }
