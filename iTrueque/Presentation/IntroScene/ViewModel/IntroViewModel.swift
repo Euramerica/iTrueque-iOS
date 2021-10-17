@@ -16,6 +16,8 @@ struct IntroState {
     var dataState: ModelDataState = .idle
     var isLogin: Bool = false
     var isRegister: Bool = false
+    var loginToast: ToastState = .none
+    
     mutating func changeViewModelState(newViewModelState: ModelDataState) {
         dataState = newViewModelState
     }
@@ -30,6 +32,7 @@ enum IntroAction{
     case showRegister
     case hideRegister
     case goToHome
+    case setLoginToast(ToastState)
 }
 
 class IntroViewModel: ViewModel{
@@ -82,6 +85,7 @@ class IntroViewModel: ViewModel{
                         self?.state.isLogin = false
                     case .failure(let error):
                         print(error.localizedDescription)
+                        self?.state.loginToast = .failure(error.localizedDescription, "")
                     }
                 } receiveValue: { [weak self] user in
                     if var cancellable = self?.cancellableSet {
@@ -121,6 +125,9 @@ class IntroViewModel: ViewModel{
         
         case .goToHome:
             coordinatorActions?.showHome()
+            
+        case .setLoginToast(let toast):
+            state.loginToast = toast
         }
     }
     
