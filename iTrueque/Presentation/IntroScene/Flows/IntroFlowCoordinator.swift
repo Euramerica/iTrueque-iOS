@@ -9,7 +9,7 @@ import UIKit
 
 protocol IntroFlowCoordinatorDependencies {
     func makeIntroViewController(coordinatorActions: IntroViewModelActions) -> UIViewController
-    func makeHomeViewController()  -> UIViewController
+    func makeTabBarViewController(coordinatorActions: TabBarViewModelActions)  -> UIViewController
 
 }
 
@@ -33,8 +33,15 @@ final class IntroFlowCoordinator {
     }
     
     func showHome(){
-        let viewController = dependencies.makeHomeViewController()
+        let coordinatorActions = TabBarViewModelActions(showIntro: showIntro)
+        let viewController = dependencies.makeTabBarViewController(coordinatorActions: coordinatorActions)
         navigationController?.setViewControllers([viewController], animated: true)
+    }
+    
+    func showIntro(){
+        let coordinatorActions = IntroViewModelActions(showHome: showHome)
+        let viewController = dependencies.makeIntroViewController(coordinatorActions: coordinatorActions)
+        navigationController?.pushViewController(viewController, animated: false)
     }
     
     

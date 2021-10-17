@@ -88,6 +88,13 @@ struct LoginView: View {
             .padding(.horizontal, 16)
             
         }
+        .toast(
+            Binding(get: {
+                viewModel.state.loginToast
+            }, set: {state in
+                viewModel.handle(.setLoginToast(state))
+            })
+        )
         .frame(
               minWidth: 0,
               maxWidth: .infinity,

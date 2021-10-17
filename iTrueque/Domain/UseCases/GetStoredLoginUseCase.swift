@@ -16,12 +16,3 @@ public final class GetStoredLogin {
             .eraseToAnyPublisher()
     }
 }
-
-public final class StoreLogin {
-    private let repository = UserAuthenticationRepository()
-    
-    func execute(_ user: UserApp) -> AnyPublisher<Void, Error> {
-        repository.storeLogin(user)
-            .eraseToAnyPublisher()
-    }
-}

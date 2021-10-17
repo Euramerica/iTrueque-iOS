@@ -27,5 +27,13 @@ final class KeyChainDataSource {
             .setFailureType(to: Error.self)
             .eraseToAnyPublisher()
     }
+    
+    func removeStoredLogin() -> AnyPublisher<Void, Error> {
+        keychain["username"] = nil
+        keychain["password"] = nil
+        return Empty()
+            .setFailureType(to: Error.self)
+            .eraseToAnyPublisher()
+    }
 }
 

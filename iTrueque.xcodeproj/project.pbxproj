@@ -37,6 +37,14 @@
 		2DBCDED027010E9500C42E32 /* TabBarFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDECF27010E9500C42E32 /* TabBarFlowCoordinator.swift */; };
 		2DBCDED227010EA000C42E32 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDED127010EA000C42E32 /* TabBarViewModel.swift */; };
 		2DBCDED427010EAF00C42E32 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDED327010EAF00C42E32 /* TabBarView.swift */; };
+		2DEEA1692719D8E800578B68 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEA1682719D8E800578B68 /* ProfileView.swift */; };
+		2DEEA16B2719D8F700578B68 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEA16A2719D8F700578B68 /* ProfileViewModel.swift */; };
+		2DEEA16D271A3EB500578B68 /* RemoveStoredLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEA16C271A3EB500578B68 /* RemoveStoredLoginUseCase.swift */; };
+		2DEEA16F271A3F0F00578B68 /* StoreLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEA16E271A3F0F00578B68 /* StoreLoginUseCase.swift */; };
+		2DEEA174271B91D200578B68 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEA173271B91D200578B68 /* Toast.swift */; };
+		2DEEA176271B91E100578B68 /* ToastModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEA175271B91E100578B68 /* ToastModifier.swift */; };
+		2DEEA178271B91ED00578B68 /* ToastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEA177271B91ED00578B68 /* ToastViewModel.swift */; };
+		2DEEA17A271B929300578B68 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEA179271B929300578B68 /* Card.swift */; };
 		2DF302DD2714539300F67242 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 2DF302DC2714539300F67242 /* KeychainAccess */; };
 		2DF302E22714598A00F67242 /* UserStoredDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF302E12714598A00F67242 /* UserStoredDataSource.swift */; };
 		D474A8362719E6A400FFB824 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D474A8352719E6A400FFB824 /* HomeView.swift */; };
@@ -90,6 +98,14 @@
 		2DBCDECF27010E9500C42E32 /* TabBarFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFlowCoordinator.swift; sourceTree = "<group>"; };
 		2DBCDED127010EA000C42E32 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		2DBCDED327010EAF00C42E32 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		2DEEA1682719D8E800578B68 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		2DEEA16A2719D8F700578B68 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		2DEEA16C271A3EB500578B68 /* RemoveStoredLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveStoredLoginUseCase.swift; sourceTree = "<group>"; };
+		2DEEA16E271A3F0F00578B68 /* StoreLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreLoginUseCase.swift; sourceTree = "<group>"; };
+		2DEEA173271B91D200578B68 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		2DEEA175271B91E100578B68 /* ToastModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastModifier.swift; sourceTree = "<group>"; };
+		2DEEA177271B91ED00578B68 /* ToastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewModel.swift; sourceTree = "<group>"; };
+		2DEEA179271B929300578B68 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		2DF302E12714598A00F67242 /* UserStoredDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStoredDataSource.swift; sourceTree = "<group>"; };
 		D474A8352719E6A400FFB824 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D474A837271A029200FFB824 /* LatestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestCell.swift; sourceTree = "<group>"; };
@@ -225,6 +241,8 @@
 				2D5E8DFB270A6EEC00F92594 /* GetStoredLoginUseCase.swift */,
 				2D5E8DFD270A6F0C00F92594 /* PerformLoginUseCase.swift */,
 				D4ACDD012715D5170002BC18 /* CreateNewUserUseCase.swift */,
+				2DEEA16C271A3EB500578B68 /* RemoveStoredLoginUseCase.swift */,
+				2DEEA16E271A3F0F00578B68 /* StoreLoginUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -342,6 +360,7 @@
 		2DBCDEBE27010D8900C42E32 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2DEEA170271B919500578B68 /* UI */,
 				2DBCDEAF27010D3600C42E32 /* Assets.xcassets */,
 				2DABC7AB27039152009AAE88 /* Localizable.strings */,
 			);
@@ -362,7 +381,9 @@
 		2DBCDECA27010E3E00C42E32 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+
 				D474A8332719E68400FFB824 /* HomeScene */,
+				2DEEA1652719D8B800578B68 /* ProfileScene */,
 				2D5E8DE427099A5000F92594 /* SplashScene */,
 				2D006E9E2702607500BD5774 /* IntroScene */,
 				2DBCDECB27010E5E00C42E32 /* TabBarScene */,
@@ -403,6 +424,58 @@
 				2DBCDED127010EA000C42E32 /* TabBarViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2DEEA1652719D8B800578B68 /* ProfileScene */ = {
+			isa = PBXGroup;
+			children = (
+				2DEEA1662719D8C900578B68 /* ViewModel */,
+				2DEEA1672719D8D000578B68 /* View */,
+			);
+			path = ProfileScene;
+			sourceTree = "<group>";
+		};
+		2DEEA1662719D8C900578B68 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2DEEA16A2719D8F700578B68 /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2DEEA1672719D8D000578B68 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2DEEA1682719D8E800578B68 /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2DEEA170271B919500578B68 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2DEEA171271B919B00578B68 /* Components */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2DEEA171271B919B00578B68 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2DEEA179271B929300578B68 /* Card.swift */,
+				2DEEA172271B91A100578B68 /* Toast */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2DEEA172271B91A100578B68 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				2DEEA173271B91D200578B68 /* Toast.swift */,
+				2DEEA175271B91E100578B68 /* ToastModifier.swift */,
+				2DEEA177271B91ED00578B68 /* ToastViewModel.swift */,
+			);
+			path = Toast;
 			sourceTree = "<group>";
 		};
 		2DF302DF2714594000F67242 /* LocalDataSources */ = {
@@ -540,23 +613,31 @@
 				D4ACDCFC27155C230002BC18 /* LoginView.swift in Sources */,
 				2DBCDEC927010E3500C42E32 /* TabBarSceneDIContainer.swift in Sources */,
 				2D006EA7270260E300BD5774 /* IntroViewModel.swift in Sources */,
+				2DEEA16B2719D8F700578B68 /* ProfileViewModel.swift in Sources */,
 				2DABC7AF27039306009AAE88 /* String.swift in Sources */,
 				2DB34986270BAF9600CB63F9 /* UserAuthenticationRepository.swift in Sources */,
 				D474A8362719E6A400FFB824 /* HomeView.swift in Sources */,
 				2DBCDEAC27010D3200C42E32 /* SceneDelegate.swift in Sources */,
 				D4ACDD022715D5170002BC18 /* CreateNewUserUseCase.swift in Sources */,
+				2DEEA1692719D8E800578B68 /* ProfileView.swift in Sources */,
 				D4ACDD00271566C90002BC18 /* RegisterView.swift in Sources */,
+				2DEEA17A271B929300578B68 /* Card.swift in Sources */,
 				2DBCDEC727010E2100C42E32 /* AppDIContainer.swift in Sources */,
 				2D006EA5270260CB00BD5774 /* IntroView.swift in Sources */,
+				2DEEA178271B91ED00578B68 /* ToastViewModel.swift in Sources */,
 				2DABC7B127039875009AAE88 /* Color.swift in Sources */,
 				2D5E8DF22709C7E700F92594 /* ViewModel.swift in Sources */,
 				D474A838271A029200FFB824 /* LatestCell.swift in Sources */,
 				2DBCDEC427010E0200C42E32 /* AppFlowCoordinator.swift in Sources */,
 				2DF302E22714598A00F67242 /* UserStoredDataSource.swift in Sources */,
+				2DEEA174271B91D200578B68 /* Toast.swift in Sources */,
+				2DEEA176271B91E100578B68 /* ToastModifier.swift in Sources */,
 				2DBCDEC227010DE200C42E32 /* AppConfiguration.swift in Sources */,
 				2DBCDED027010E9500C42E32 /* TabBarFlowCoordinator.swift in Sources */,
 				2D5E8DEF2709C10600F92594 /* SplashSceneDIContainer.swift in Sources */,
 				2D006EA3270260B700BD5774 /* IntroFlowCoordinator.swift in Sources */,
+				2DEEA16F271A3F0F00578B68 /* StoreLoginUseCase.swift in Sources */,
+				2DEEA16D271A3EB500578B68 /* RemoveStoredLoginUseCase.swift in Sources */,
 				2DBCDED427010EAF00C42E32 /* TabBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
