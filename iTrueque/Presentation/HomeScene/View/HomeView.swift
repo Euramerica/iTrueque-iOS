@@ -25,7 +25,7 @@ struct HomeView: View {
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack {
                         ForEach(0 ..< 5) { _ in
-                            TagedView()
+                            TagView()
                         }
                     }
                 }
@@ -74,34 +74,3 @@ struct HomeView_Previews: PreviewProvider {
 }
 
 
-//ScrollView {
-//    LazyHStack(spacing: 16){
-//        ForEach(0 ..< 5) { item in
-//            Text("Aventura")
-//                .font(.title2)
-//                .fontWeight(.bold)
-//                .foregroundColor(.white)
-//                .padding(.all, 8)
-//                .background(Color.mainColor)
-//                .cornerRadius(8)
-//        }
-//    }
-//    .background(Color.secondaryBackground)
-//    .padding(.top, 16)
-//    .padding(.horizontal, 16)
-//}
-
-
-
-
-struct TagedView: View {
-    var body: some View {
-        Text("Aventura")
-            .font(.title2)
-            .fontWeight(.bold)
-            .foregroundColor(.white)
-            .padding(.all, 8)
-            .background(Color.mainColor)
-            .cornerRadius(8)
-    }
-}
