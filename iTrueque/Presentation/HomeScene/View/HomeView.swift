@@ -11,71 +11,57 @@ struct HomeView: View {
     
     @State var searchText = ""
     
-    
     var body: some View {
-        
-        List{
-            HStack(alignment: .center){
-                Image(systemName: "magnifyingglass")
-                    .resizable()
-                    .frame(width: 21, height: 21, alignment: .center)
-                    .padding(.leading, 32)
-                    .foregroundColor(.bodyColor)
-                TextField("Read_today".localized(), text: $searchText)
-                    .multilineTextAlignment(.center)
+        VStack{
+            
+            //SearchView
+            SearchView(searchText: $searchText)
+            
+            //Main scroll view
+            ScrollView(.vertical){
                 
-            }
-            .frame(height: 56)
-            .background(Color.secondaryBackground)
-            .cornerRadius(8)
-            .padding(.vertical, 8)
-            .padding(.horizontal, 16)
-            
-            
-            // Genre row
-            ScrollView(.horizontal, showsIndicators: false){
-                HStack(spacing: 16){
-                    ForEach(0 ..< 5) { item in
-                        Text("Aventura")
-                            .font(.title2)
-                            .fontWeight(.bold)
-                            .foregroundColor(.white)
-                            .padding(.all, 8)
-                            .background(Color.mainColor)
-                            .cornerRadius(8)
-                    }
-                }
-            }
-            
-            // Latest row
-            VStack(alignment: .leading){
-                HStack{
-                    Text("+")
-                        .font(.title)
-                        .fontWeight(.bold)
-                    Text("Recientes")
-                        .font(.title)
-                        .fontWeight(.bold)
-                }
-                .foregroundColor(.textTitleColor)
+                
+                //Genrer row
                 ScrollView(.horizontal, showsIndicators: false){
-                    LazyHStack(spacing: 16){
-                        ForEach(0 ..< 5) { item in
-                            LatestCell()
-                                .frame(width: 200, height: 220)
-                                .background(Color.white)
-                                .padding()
+                    HStack {
+                        ForEach(0 ..< 5) { _ in
+                            TagedView()
                         }
                     }
-                    
                 }
+                .padding(.top, 32)
                 
+                
+                
+                //Main row
+                VStack(alignment: .leading) {
+                    SectionView(title: "Latest".localized())
+                    ScrollView(.horizontal, showsIndicators: false){
+                        HStack(spacing: 32){
+                            ForEach(0 ..< 5) { _ in
+                                FeaturedView()
+                            }
+                        }
+                    }
+                }.padding(.top, 32)
+                
+                
+                // Continues content
+                VStack(alignment: .leading) {
+                    SectionView(title: "Popular".localized())
+                    ScrollView(.horizontal, showsIndicators: false){
+                        HStack(spacing: 32){
+                            ForEach(0 ..< 5) { _ in
+                                SecondaryView()
+                            }
+                        }
+                    }
+                }.padding(.top, 32)
+            
             }
-            .frame(height: 320)
-            .padding(.top, 32)
+            .padding()
+            
         }
-        
-        
     }
 }
 
@@ -104,3 +90,18 @@ struct HomeView_Previews: PreviewProvider {
 //    .padding(.top, 16)
 //    .padding(.horizontal, 16)
 //}
+
+
+
+
+struct TagedView: View {
+    var body: some View {
+        Text("Aventura")
+            .font(.title2)
+            .fontWeight(.bold)
+            .foregroundColor(.white)
+            .padding(.all, 8)
+            .background(Color.mainColor)
+            .cornerRadius(8)
+    }
+}
