@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct FeaturedView: View {
+    
+    let product: Product
+    
     var body: some View {
         ZStack {
             Rectangle()
@@ -25,10 +28,10 @@ struct FeaturedView: View {
                     
                     //Book and Author
                     VStack(alignment: .leading){
-                        Text("The Hobbit")
+                        Text(product.title)
                             .font(.title3)
                             .fontWeight(.bold)
-                        Text("Tolkien")
+                        Text(product.author)
                             .font(.body)
                     }
                     .foregroundColor(.textTitleColor)
@@ -51,7 +54,7 @@ struct FeaturedView: View {
 
 struct LatestCell_Previews: PreviewProvider {
     static var previews: some View {
-        FeaturedView()
+        FeaturedView(product:    Product(id: "1", userId: "1", exchangeId: "1", title: "The hobbit", author: "Tolkien", condition: "nuebo", createdAt: Date(), modAt: Date(), img: "www.google.com"))
             .previewLayout(.sizeThatFits)
     }
 }

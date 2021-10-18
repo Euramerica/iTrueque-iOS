@@ -11,6 +11,10 @@ struct HomeView: View {
     
     @State var searchText = ""
     
+    let getGenresUseCase = GetGenresUseCase()
+    let getLatestUseCase = GetLatestBooks()
+    let getPopularUseCase = GetMostPopular()
+    
     var body: some View {
         VStack{
             
@@ -19,27 +23,23 @@ struct HomeView: View {
             
             //Main scroll view
             ScrollView(.vertical){
-                
-                
                 //Genrer row
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack {
-                        ForEach(0 ..< 5) { _ in
-                            TagView()
+                        ForEach(getGenresUseCase.execute()) { genre in
+                            TagView(tagTitle: genre.generType.description)
                         }
                     }
                 }
                 .padding(.top, 32)
-                
-                
                 
                 //Main row
                 VStack(alignment: .leading) {
                     SectionView(title: "Latest".localized())
                     ScrollView(.horizontal, showsIndicators: false){
                         HStack(spacing: 32){
-                            ForEach(0 ..< 5) { _ in
-                                FeaturedView()
+                            ForEach(getLatestUseCase.execute()) { product in
+                                FeaturedView(product: product)
                             }
                         }
                     }
@@ -51,8 +51,8 @@ struct HomeView: View {
                     SectionView(title: "Popular".localized())
                     ScrollView(.horizontal, showsIndicators: false){
                         HStack(spacing: 32){
-                            ForEach(0 ..< 5) { _ in
-                                SecondaryView()
+                            ForEach(getPopularUseCase.execute()) { product in
+                                SecondaryView(product: product)
                             }
                         }
                     }
