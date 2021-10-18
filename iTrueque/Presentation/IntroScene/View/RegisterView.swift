@@ -9,10 +9,11 @@ import SwiftUI
 
 struct RegisterView: View {
     
-    //
-    @State private var userName:    String = ""
+    @State private var name:    String = ""
+    @State private var surname:    String = ""
     @State private var email:       String = ""
     @State private var password:    String = ""
+    @State private var confirmPassword:    String = ""
     @State private var isEditing:   Bool = false
     
     
@@ -37,7 +38,19 @@ struct RegisterView: View {
             .padding(.horizontal, 16)
         
             VStack {
-                TextField("Your_name".localized(), text: $userName) { currentEditState in
+                TextField("Your_name".localized(), text: $name) { currentEditState in
+                    self.isEditing = currentEditState
+                }
+                .disableAutocorrection(true)
+                .autocapitalization(.none)
+                .padding(.horizontal)
+                .frame(height: 56)
+                .background(
+                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        .stroke(isEditing ?Color.mainColor :Color.bodyColor, lineWidth: 3)
+                )
+                
+                TextField("Your_surname".localized(), text: $surname) { currentEditState in
                     self.isEditing = currentEditState
                 }
                 .disableAutocorrection(true)
@@ -72,6 +85,18 @@ struct RegisterView: View {
                     RoundedRectangle(cornerRadius: 10, style: .continuous)
                         .stroke(isEditing ?Color.mainColor :Color.bodyColor, lineWidth: 3)
                 )
+                
+                TextField("Confirm_password".localized(), text: $confirmPassword) { currentEditState in
+                    self.isEditing = currentEditState
+                }
+                .disableAutocorrection(true)
+                .autocapitalization(.none)
+                .padding(.horizontal)
+                .frame(height: 56)
+                .background(
+                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        .stroke(isEditing ?Color.mainColor :Color.bodyColor, lineWidth: 3)
+                )
             
                 Divider()
                     .padding(.top, 16)
@@ -84,8 +109,15 @@ struct RegisterView: View {
             
             Button(action: {
                 
-                guard !email.isEmpty, !password.isEmpty, !userName.isEmpty else { return }
-                viewModel.handle(.createNewUser(userName: userName, email: email, password: password))
+                //confirm password
+                guard password == confirmPassword else {
+                    return viewModel.handle(.setLoginToast(.failure("Confirm_password_valid".localized(), "")))
+                }
+                
+                guard !email.isEmpty, !password.isEmpty, !name.isEmpty, !surname.isEmpty else {
+                    return viewModel.handle(.setLoginToast(.failure("All_fields_mandatory".localized(), "")))
+                }
+                viewModel.handle(.createNewUser(name: name, surname: surname, email: email, password: password))
                 
             }, label: {
                 Text("Register_user".localized())
@@ -104,6 +136,13 @@ struct RegisterView: View {
             
             
         }
+        .toast(
+            Binding(get: {
+                viewModel.state.loginToast
+            }, set: {state in
+                viewModel.handle(.setLoginToast(state))
+            })
+        )
         .frame(
               minWidth: 0,
               maxWidth: .infinity,

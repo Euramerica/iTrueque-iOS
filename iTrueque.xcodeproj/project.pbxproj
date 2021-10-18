@@ -45,6 +45,7 @@
 		2DEEA176271B91E100578B68 /* ToastModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEA175271B91E100578B68 /* ToastModifier.swift */; };
 		2DEEA178271B91ED00578B68 /* ToastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEA177271B91ED00578B68 /* ToastViewModel.swift */; };
 		2DEEA17A271B929300578B68 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEA179271B929300578B68 /* Card.swift */; };
+		2DEEA17C271C8A1800578B68 /* CreateNewUserDatabaseUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEA17B271C8A1800578B68 /* CreateNewUserDatabaseUseCase.swift */; };
 		2DF302DD2714539300F67242 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 2DF302DC2714539300F67242 /* KeychainAccess */; };
 		2DF302E22714598A00F67242 /* UserStoredDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF302E12714598A00F67242 /* UserStoredDataSource.swift */; };
 		D474A8362719E6A400FFB824 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D474A8352719E6A400FFB824 /* HomeView.swift */; };
@@ -118,6 +119,7 @@
 		2DEEA175271B91E100578B68 /* ToastModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastModifier.swift; sourceTree = "<group>"; };
 		2DEEA177271B91ED00578B68 /* ToastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewModel.swift; sourceTree = "<group>"; };
 		2DEEA179271B929300578B68 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		2DEEA17B271C8A1800578B68 /* CreateNewUserDatabaseUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewUserDatabaseUseCase.swift; sourceTree = "<group>"; };
 		2DF302E12714598A00F67242 /* UserStoredDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStoredDataSource.swift; sourceTree = "<group>"; };
 		D474A8352719E6A400FFB824 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D474A837271A029200FFB824 /* FeaturedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedView.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				D4ACDD012715D5170002BC18 /* CreateNewUserUseCase.swift */,
 				2DEEA16C271A3EB500578B68 /* RemoveStoredLoginUseCase.swift */,
 				2DEEA16E271A3F0F00578B68 /* StoreLoginUseCase.swift */,
+				2DEEA17B271C8A1800578B68 /* CreateNewUserDatabaseUseCase.swift */,
 				D4F24B85271DFF49003EC621 /* GetGenreUseCase.swift */,
 				D4F24B87271E0859003EC621 /* GetLatestBooksUseCase.swift */,
 				D4F24B89271E0894003EC621 /* GetMostPopularUseCase.swift */,
@@ -704,6 +707,7 @@
 				D4ACDD022715D5170002BC18 /* CreateNewUserUseCase.swift in Sources */,
 				2DEEA1692719D8E800578B68 /* ProfileView.swift in Sources */,
 				D4ACDD00271566C90002BC18 /* RegisterView.swift in Sources */,
+				2DEEA17C271C8A1800578B68 /* CreateNewUserDatabaseUseCase.swift in Sources */,
 				D4F24B88271E0859003EC621 /* GetLatestBooksUseCase.swift in Sources */,
 				D4F24B81271DF88A003EC621 /* Genre.swift in Sources */,
 				2DEEA17A271B929300578B68 /* Card.swift in Sources */,
