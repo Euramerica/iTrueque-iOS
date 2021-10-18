@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct TagView: View {
+    
+    let tagTitle: String
+    
     var body: some View {
-        Text("Aventura")
+        Text(tagTitle)
             .font(.title2)
             .fontWeight(.bold)
             .foregroundColor(.white)
@@ -21,7 +24,7 @@ struct TagView: View {
 
 struct TagView_Previews: PreviewProvider {
     static var previews: some View {
-        TagView()
+        TagView(tagTitle: "Tag Title")
             .previewLayout(.sizeThatFits)
     }
 }
