@@ -73,6 +73,7 @@
 		D4F24B88271E0859003EC621 /* GetLatestBooksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F24B87271E0859003EC621 /* GetLatestBooksUseCase.swift */; };
 		D4F24B8A271E0894003EC621 /* GetMostPopularUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F24B89271E0894003EC621 /* GetMostPopularUseCase.swift */; };
 		D4F24B8C271E08D7003EC621 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F24B8B271E08D7003EC621 /* Product.swift */; };
+		D4F24B8E271E0A7D003EC621 /* GenderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F24B8D271E0A7D003EC621 /* GenderRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -135,6 +136,7 @@
 		D4F24B87271E0859003EC621 /* GetLatestBooksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLatestBooksUseCase.swift; sourceTree = "<group>"; };
 		D4F24B89271E0894003EC621 /* GetMostPopularUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMostPopularUseCase.swift; sourceTree = "<group>"; };
 		D4F24B8B271E08D7003EC621 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		D4F24B8D271E0A7D003EC621 /* GenderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				2DB34985270BAF9600CB63F9 /* UserAuthenticationRepository.swift */,
+				D4F24B8D271E0A7D003EC621 /* GenderRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -693,6 +696,7 @@
 				2DBCDEC927010E3500C42E32 /* TabBarSceneDIContainer.swift in Sources */,
 				2D006EA7270260E300BD5774 /* IntroViewModel.swift in Sources */,
 				2DEEA16B2719D8F700578B68 /* ProfileViewModel.swift in Sources */,
+				D4F24B8E271E0A7D003EC621 /* GenderRepository.swift in Sources */,
 				2DABC7AF27039306009AAE88 /* String.swift in Sources */,
 				2DB34986270BAF9600CB63F9 /* UserAuthenticationRepository.swift in Sources */,
 				D474A8362719E6A400FFB824 /* HomeView.swift in Sources */,
