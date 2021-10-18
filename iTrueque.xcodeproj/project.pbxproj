@@ -67,6 +67,12 @@
 		D4E183DC27039916000A3EFD /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = D4E183DB27039916000A3EFD /* FirebaseMessaging */; };
 		D4E183DE27039916000A3EFD /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = D4E183DD27039916000A3EFD /* FirebaseFunctions */; };
 		D4E183E027039916000A3EFD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D4E183DF27039916000A3EFD /* FirebaseAuth */; };
+		D4F24B81271DF88A003EC621 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F24B80271DF88A003EC621 /* Genre.swift */; };
+		D4F24B84271DF8C6003EC621 /* AppAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F24B83271DF8C6003EC621 /* AppAlias.swift */; };
+		D4F24B86271DFF49003EC621 /* GetGenreUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F24B85271DFF49003EC621 /* GetGenreUseCase.swift */; };
+		D4F24B88271E0859003EC621 /* GetLatestBooksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F24B87271E0859003EC621 /* GetLatestBooksUseCase.swift */; };
+		D4F24B8A271E0894003EC621 /* GetMostPopularUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F24B89271E0894003EC621 /* GetMostPopularUseCase.swift */; };
+		D4F24B8C271E08D7003EC621 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F24B8B271E08D7003EC621 /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +129,12 @@
 		D4ACDCFD2715630E0002BC18 /* ModelDataState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataState.swift; sourceTree = "<group>"; };
 		D4ACDCFF271566C90002BC18 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		D4ACDD012715D5170002BC18 /* CreateNewUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewUserUseCase.swift; sourceTree = "<group>"; };
+		D4F24B80271DF88A003EC621 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		D4F24B83271DF8C6003EC621 /* AppAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAlias.swift; sourceTree = "<group>"; };
+		D4F24B85271DFF49003EC621 /* GetGenreUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGenreUseCase.swift; sourceTree = "<group>"; };
+		D4F24B87271E0859003EC621 /* GetLatestBooksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLatestBooksUseCase.swift; sourceTree = "<group>"; };
+		D4F24B89271E0894003EC621 /* GetMostPopularUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMostPopularUseCase.swift; sourceTree = "<group>"; };
+		D4F24B8B271E08D7003EC621 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +265,9 @@
 				D4ACDD012715D5170002BC18 /* CreateNewUserUseCase.swift */,
 				2DEEA16C271A3EB500578B68 /* RemoveStoredLoginUseCase.swift */,
 				2DEEA16E271A3F0F00578B68 /* StoreLoginUseCase.swift */,
+				D4F24B85271DFF49003EC621 /* GetGenreUseCase.swift */,
+				D4F24B87271E0859003EC621 /* GetLatestBooksUseCase.swift */,
+				D4F24B89271E0894003EC621 /* GetMostPopularUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -262,6 +277,8 @@
 			children = (
 				2DB34982270B5FF100CB63F9 /* StoredLogin.swift */,
 				2DB4650C270D0121007705A7 /* UserApp.swift */,
+				D4F24B80271DF88A003EC621 /* Genre.swift */,
+				D4F24B8B271E08D7003EC621 /* Product.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -357,6 +374,7 @@
 		2DBCDEBD27010D7A00C42E32 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				D4F24B82271DF8AC003EC621 /* Utilities */,
 				2DBCDEA927010D3200C42E32 /* AppDelegate.swift */,
 				2DBCDEAB27010D3200C42E32 /* SceneDelegate.swift */,
 				2DBCDEC127010DE200C42E32 /* AppConfiguration.swift */,
@@ -556,6 +574,14 @@
 			path = Bars;
 			sourceTree = "<group>";
 		};
+		D4F24B82271DF8AC003EC621 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D4F24B83271DF8C6003EC621 /* AppAlias.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -648,18 +674,22 @@
 				D4ACDCFE2715630E0002BC18 /* ModelDataState.swift in Sources */,
 				2DABC7B32703CA0C009AAE88 /* IntroSceneDIContainer.swift in Sources */,
 				2DBCDEAA27010D3200C42E32 /* AppDelegate.swift in Sources */,
+				D4F24B8A271E0894003EC621 /* GetMostPopularUseCase.swift in Sources */,
 				2D5E8DE927099B8B00F92594 /* SplashView.swift in Sources */,
+				D4F24B8C271E08D7003EC621 /* Product.swift in Sources */,
 				2D5E8DFE270A6F0C00F92594 /* PerformLoginUseCase.swift in Sources */,
 				2D5E8DED27099BAA00F92594 /* SplashFlowCoordinator.swift in Sources */,
 				2D5E8DEB27099B9600F92594 /* SplashViewModel.swift in Sources */,
 				2DB4650D270D0121007705A7 /* UserApp.swift in Sources */,
 				2DBCDED227010EA000C42E32 /* TabBarViewModel.swift in Sources */,
 				2D5E8DFC270A6EEC00F92594 /* GetStoredLoginUseCase.swift in Sources */,
+				D4F24B86271DFF49003EC621 /* GetGenreUseCase.swift in Sources */,
 				D4A421BE271C7044005F7ABB /* SecondaryView.swift in Sources */,
 				D4A421BC271C6F96005F7ABB /* SearchView.swift in Sources */,
 				2DB34983270B5FF100CB63F9 /* StoredLogin.swift in Sources */,
 				D4ACDCFC27155C230002BC18 /* LoginView.swift in Sources */,
 				D4A421BA271C6E7F005F7ABB /* SectionView.swift in Sources */,
+				D4F24B84271DF8C6003EC621 /* AppAlias.swift in Sources */,
 				2DBCDEC927010E3500C42E32 /* TabBarSceneDIContainer.swift in Sources */,
 				2D006EA7270260E300BD5774 /* IntroViewModel.swift in Sources */,
 				2DEEA16B2719D8F700578B68 /* ProfileViewModel.swift in Sources */,
@@ -670,6 +700,8 @@
 				D4ACDD022715D5170002BC18 /* CreateNewUserUseCase.swift in Sources */,
 				2DEEA1692719D8E800578B68 /* ProfileView.swift in Sources */,
 				D4ACDD00271566C90002BC18 /* RegisterView.swift in Sources */,
+				D4F24B88271E0859003EC621 /* GetLatestBooksUseCase.swift in Sources */,
+				D4F24B81271DF88A003EC621 /* Genre.swift in Sources */,
 				2DEEA17A271B929300578B68 /* Card.swift in Sources */,
 				D4A421C8271C8519005F7ABB /* TagView.swift in Sources */,
 				2DBCDEC727010E2100C42E32 /* AppDIContainer.swift in Sources */,
@@ -844,6 +876,7 @@
 				DEVELOPMENT_TEAM = N77YM99E23;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iTrueque/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -865,6 +898,7 @@
 				DEVELOPMENT_TEAM = N77YM99E23;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iTrueque/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
