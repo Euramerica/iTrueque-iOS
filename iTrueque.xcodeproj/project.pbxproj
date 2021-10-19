@@ -10,6 +10,8 @@
 		2D006EA3270260B700BD5774 /* IntroFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D006EA2270260B700BD5774 /* IntroFlowCoordinator.swift */; };
 		2D006EA5270260CB00BD5774 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D006EA4270260CB00BD5774 /* IntroView.swift */; };
 		2D006EA7270260E300BD5774 /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D006EA6270260E300BD5774 /* IntroViewModel.swift */; };
+		2D48F688271E3C81007C2096 /* GenreCollectionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D48F687271E3C81007C2096 /* GenreCollectionRepository.swift */; };
+		2D48F68B271E3E47007C2096 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D48F68A271E3E47007C2096 /* HomeViewModel.swift */; };
 		2D5E8DE927099B8B00F92594 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5E8DE827099B8B00F92594 /* SplashView.swift */; };
 		2D5E8DEB27099B9600F92594 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5E8DEA27099B9600F92594 /* SplashViewModel.swift */; };
 		2D5E8DED27099BAA00F92594 /* SplashFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5E8DEC27099BAA00F92594 /* SplashFlowCoordinator.swift */; };
@@ -46,6 +48,7 @@
 		2DEEA178271B91ED00578B68 /* ToastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEA177271B91ED00578B68 /* ToastViewModel.swift */; };
 		2DEEA17A271B929300578B68 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEA179271B929300578B68 /* Card.swift */; };
 		2DEEA17C271C8A1800578B68 /* CreateNewUserDatabaseUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEA17B271C8A1800578B68 /* CreateNewUserDatabaseUseCase.swift */; };
+		2DEEA17E271CDB1400578B68 /* GenreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEA17D271CDB1300578B68 /* GenreButton.swift */; };
 		2DF302DD2714539300F67242 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 2DF302DC2714539300F67242 /* KeychainAccess */; };
 		2DF302E22714598A00F67242 /* UserStoredDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF302E12714598A00F67242 /* UserStoredDataSource.swift */; };
 		D474A8362719E6A400FFB824 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D474A8352719E6A400FFB824 /* HomeView.swift */; };
@@ -81,6 +84,8 @@
 		2D006EA2270260B700BD5774 /* IntroFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroFlowCoordinator.swift; sourceTree = "<group>"; };
 		2D006EA4270260CB00BD5774 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		2D006EA6270260E300BD5774 /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
+		2D48F687271E3C81007C2096 /* GenreCollectionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCollectionRepository.swift; sourceTree = "<group>"; };
+		2D48F68A271E3E47007C2096 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		2D5E8DE827099B8B00F92594 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		2D5E8DEA27099B9600F92594 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		2D5E8DEC27099BAA00F92594 /* SplashFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFlowCoordinator.swift; sourceTree = "<group>"; };
@@ -120,6 +125,7 @@
 		2DEEA177271B91ED00578B68 /* ToastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewModel.swift; sourceTree = "<group>"; };
 		2DEEA179271B929300578B68 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		2DEEA17B271C8A1800578B68 /* CreateNewUserDatabaseUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewUserDatabaseUseCase.swift; sourceTree = "<group>"; };
+		2DEEA17D271CDB1300578B68 /* GenreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreButton.swift; sourceTree = "<group>"; };
 		2DF302E12714598A00F67242 /* UserStoredDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStoredDataSource.swift; sourceTree = "<group>"; };
 		D474A8352719E6A400FFB824 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D474A837271A029200FFB824 /* FeaturedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedView.swift; sourceTree = "<group>"; };
@@ -194,6 +200,14 @@
 			isa = PBXGroup;
 			children = (
 				2D006EA6270260E300BD5774 /* IntroViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2D48F689271E3E34007C2096 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2D48F68A271E3E47007C2096 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -333,6 +347,7 @@
 			children = (
 				2DB34985270BAF9600CB63F9 /* UserAuthenticationRepository.swift */,
 				D4F24B8D271E0A7D003EC621 /* GenderRepository.swift */,
+				2D48F687271E3C81007C2096 /* GenreCollectionRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -532,6 +547,7 @@
 		D474A8332719E68400FFB824 /* HomeScene */ = {
 			isa = PBXGroup;
 			children = (
+				2D48F689271E3E34007C2096 /* ViewModel */,
 				D474A8342719E69100FFB824 /* View */,
 			);
 			path = HomeScene;
@@ -558,6 +574,7 @@
 			isa = PBXGroup;
 			children = (
 				D4A421BF271C718B005F7ABB /* ExchangeButton.swift */,
+				2DEEA17D271CDB1300578B68 /* GenreButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -684,6 +701,8 @@
 				2D5E8DE927099B8B00F92594 /* SplashView.swift in Sources */,
 				D4F24B8C271E08D7003EC621 /* Product.swift in Sources */,
 				2D5E8DFE270A6F0C00F92594 /* PerformLoginUseCase.swift in Sources */,
+				2DEEA17E271CDB1400578B68 /* GenreButton.swift in Sources */,
+				2D48F688271E3C81007C2096 /* GenreCollectionRepository.swift in Sources */,
 				2D5E8DED27099BAA00F92594 /* SplashFlowCoordinator.swift in Sources */,
 				2D5E8DEB27099B9600F92594 /* SplashViewModel.swift in Sources */,
 				2DB4650D270D0121007705A7 /* UserApp.swift in Sources */,
@@ -726,6 +745,7 @@
 				2DBCDEC227010DE200C42E32 /* AppConfiguration.swift in Sources */,
 				2DBCDED027010E9500C42E32 /* TabBarFlowCoordinator.swift in Sources */,
 				2D5E8DEF2709C10600F92594 /* SplashSceneDIContainer.swift in Sources */,
+				2D48F68B271E3E47007C2096 /* HomeViewModel.swift in Sources */,
 				2D006EA3270260B700BD5774 /* IntroFlowCoordinator.swift in Sources */,
 				2DEEA16F271A3F0F00578B68 /* StoreLoginUseCase.swift in Sources */,
 				2DEEA16D271A3EB500578B68 /* RemoveStoredLoginUseCase.swift in Sources */,

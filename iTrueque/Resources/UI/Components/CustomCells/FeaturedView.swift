@@ -22,10 +22,8 @@ struct FeaturedView: View {
                     .resizable()
                     .scaledToFit()
                     .padding(.all, 4)
-                
                 Spacer()
                 HStack {
-                    
                     //Book and Author
                     VStack(alignment: .leading){
                         Text(product.title)
@@ -34,10 +32,9 @@ struct FeaturedView: View {
                         Text(product.author)
                             .font(.body)
                     }
+                    .padding(.leading, 4)
                     .foregroundColor(.textTitleColor)
-                    
                     Spacer()
-                    
                     //Exchange Button
                     ExchangeButton()
                 }

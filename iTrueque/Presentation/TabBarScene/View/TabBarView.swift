@@ -20,7 +20,7 @@ struct TabBarView: View {
                         Text(viewModel.title)
                     }
             }
-        }
+        }.accentColor(.mainColor)
         
     }
     
@@ -28,7 +28,11 @@ struct TabBarView: View {
     func tabView(for tabItemType: TabItemViewModel.TabItemType) -> some View {
         switch tabItemType {
         case .home:
-           HomeView()
+            if let homeScreenViewModel = viewModel.state.homeScreenViewModel {
+                HomeView().environmentObject(
+                    AnyViewModel(homeScreenViewModel)
+                )
+            }
             
         case .addProduct:
             Text("Add product")

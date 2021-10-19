@@ -11,9 +11,11 @@ struct HomeView: View {
     
     @State var searchText = ""
     
-    let getGenresUseCase = GetGenresUseCase()
     let getLatestUseCase = GetLatestBooks()
     let getPopularUseCase = GetMostPopular()
+    
+    @EnvironmentObject
+    var viewModel: AnyViewModel<HomeState, HomeAction>
     
     var body: some View {
         VStack{
@@ -26,12 +28,13 @@ struct HomeView: View {
                 //Genrer row
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack {
-                        ForEach(getGenresUseCase.execute()) { genre in
-                            TagView(tagTitle: genre.generType.description)
+                        ForEach(viewModel.state.genres) { genre in
+                            //TagView(tagTitle: genre.generType.description)
+                            GenreButton(image: genre.image, title: genre.title , action: {})
                         }
                     }
                 }
-                .padding(.top, 32)
+                .padding(.top, 8)
                 
                 //Main row
                 VStack(alignment: .leading) {
@@ -43,12 +46,11 @@ struct HomeView: View {
                             }
                         }
                     }
-                }.padding(.top, 32)
-                
+                }.padding(.top, 16)
                 
                 // Continues content
                 VStack(alignment: .leading) {
-                    SectionView(title: "Popular".localized())
+                    SectionView(title: "Populars".localized())
                     ScrollView(.horizontal, showsIndicators: false){
                         HStack(spacing: 32){
                             ForEach(getPopularUseCase.execute()) { product in
@@ -59,8 +61,11 @@ struct HomeView: View {
                 }.padding(.top, 32)
             
             }
-            .padding()
-            
+            .padding(.top, 0)
+            .padding(.leading)
+        }
+        .onAppear() {
+            viewModel.handle(.onAppear)
         }
     }
 }

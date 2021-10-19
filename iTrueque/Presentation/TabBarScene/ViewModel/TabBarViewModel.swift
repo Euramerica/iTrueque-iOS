@@ -16,6 +16,7 @@ struct TabBarState {
     var dataState: ModelDataState = .idle
     var tabItemViewModels: [TabItemViewModel] = []
     var profileScreenViewModel: ProfileViewModel? = nil
+    var homeScreenViewModel: HomeViewModel? = nil
     
     mutating func changeViewModelState(newViewModelState: ModelDataState) {
         dataState = newViewModelState
@@ -54,11 +55,12 @@ final class TabBarViewModel: ViewModel {
     @Published
     var state: TabBarState
     
-    init(state: TabBarState, coordinatorActions: TabBarViewModelActions? = nil, profileScreenViewModel: ProfileViewModel) {
+    init(state: TabBarState, coordinatorActions: TabBarViewModelActions? = nil, profileScreenViewModel: ProfileViewModel, homeScreenViewModel: HomeViewModel) {
         self.state = state
         self.coordinatorActions = coordinatorActions
         //self.profileScreenViewModel = profileScreenViewModel
         self.state.profileScreenViewModel = profileScreenViewModel
+        self.state.homeScreenViewModel = homeScreenViewModel
         self.state.changeViewModelState(newViewModelState: .loading)
         self.state.tabItemViewModels = tabItemViewModels
     }

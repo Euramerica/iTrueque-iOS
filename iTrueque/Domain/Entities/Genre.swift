@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseFirestoreSwift
 
 enum GenreType: String, Codable{
     case adventure = "Aventura"
@@ -14,24 +15,15 @@ enum GenreType: String, Codable{
     case technical = "Tecnico"
     case thriller  = "Triller"
     case fantasy   = "Fantasia"
+    case travel   = "Viajes"
     
     var description: String {
         return self.rawValue
     }
 }
 
-struct Genre: Requestable {
-    let id: String
-    let generType: GenreType
-    
-    static func genres() -> [Genre]{
-        return [
-            Genre(id: "1", generType: .adventure),
-            Genre(id: "2", generType: .scifi),
-            Genre(id: "3", generType: .romance),
-            Genre(id: "4", generType: .technical),
-            Genre(id: "5", generType: .thriller),
-            Genre(id: "6", generType: .fantasy)
-        ]
-    }
+struct Genre: Codable, Identifiable {
+    @DocumentID public var id: String?
+    let image: String
+    let title: String
 }
