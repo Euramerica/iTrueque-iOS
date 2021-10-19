@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct SecondaryView: View {
+    
+    let product: Product
+    
     var body: some View {
         HStack{
             Image("book")
@@ -15,10 +18,10 @@ struct SecondaryView: View {
                 .scaledToFit()
                 .padding(.all, 4)
             VStack(alignment: .leading){
-                Text("Title")
+                Text(product.title)
                     .font(.title2)
                     .foregroundColor(.textTitleColor)
-                Text("Author")
+                Text(product.author)
                     .font(.body)
                     .foregroundColor(.bodyColor)
             }
@@ -38,7 +41,7 @@ struct SecondaryView: View {
 
 struct SecondatyCellType_Previews: PreviewProvider {
     static var previews: some View {
-        SecondaryView()
+        SecondaryView(product: Product(id: "1", userId: "1", exchangeId: "1", title: "The hobbit", author: "Tolkien", condition: "nuebo", createdAt: Date(), modAt: Date(), img: "www.google.com"))
             .previewLayout(.sizeThatFits)
     }
 }

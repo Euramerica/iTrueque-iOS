@@ -18,7 +18,7 @@
 "New_account"               = "Creando nueva cuenta";
 "Read_today"                = "¿Que te apetece leer hoy?";
 "Latest"                    = "Recientes";
-"Popular"                   = "Populates";
+"Populars"                  = "Populares";
 
 //MARK: - SingIn
 "All_fields_mandatory"      = "Todos los campos son obligatorios.";

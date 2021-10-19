@@ -11,6 +11,12 @@ struct HomeView: View {
     
     @State var searchText = ""
     
+    let getLatestUseCase = GetLatestBooks()
+    let getPopularUseCase = GetMostPopular()
+    
+    @EnvironmentObject
+    var viewModel: AnyViewModel<HomeState, HomeAction>
+    
     var body: some View {
         VStack{
             
@@ -19,48 +25,47 @@ struct HomeView: View {
             
             //Main scroll view
             ScrollView(.vertical){
-                
-                
                 //Genrer row
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack {
-                        ForEach(0 ..< 5) { _ in
-                            TagedView()
+                        ForEach(viewModel.state.genres) { genre in
+                            //TagView(tagTitle: genre.generType.description)
+                            GenreButton(image: genre.image, title: genre.title , action: {})
                         }
                     }
                 }
-                .padding(.top, 32)
-                
-                
+                .padding(.top, 8)
                 
                 //Main row
                 VStack(alignment: .leading) {
                     SectionView(title: "Latest".localized())
                     ScrollView(.horizontal, showsIndicators: false){
                         HStack(spacing: 32){
-                            ForEach(0 ..< 5) { _ in
-                                FeaturedView()
+                            ForEach(getLatestUseCase.execute()) { product in
+                                FeaturedView(product: product)
                             }
                         }
                     }
-                }.padding(.top, 32)
-                
+                }.padding(.top, 16)
                 
                 // Continues content
                 VStack(alignment: .leading) {
-                    SectionView(title: "Popular".localized())
+                    SectionView(title: "Populars".localized())
                     ScrollView(.horizontal, showsIndicators: false){
                         HStack(spacing: 32){
-                            ForEach(0 ..< 5) { _ in
-                                SecondaryView()
+                            ForEach(getPopularUseCase.execute()) { product in
+                                SecondaryView(product: product)
                             }
                         }
                     }
                 }.padding(.top, 32)
             
             }
-            .padding()
-            
+            .padding(.top, 0)
+            .padding(.leading)
+        }
+        .onAppear() {
+            viewModel.handle(.onAppear)
         }
     }
 }
@@ -74,34 +79,3 @@ struct HomeView_Previews: PreviewProvider {
 }
 
 
-//ScrollView {
-//    LazyHStack(spacing: 16){
-//        ForEach(0 ..< 5) { item in
-//            Text("Aventura")
-//                .font(.title2)
-//                .fontWeight(.bold)
-//                .foregroundColor(.white)
-//                .padding(.all, 8)
-//                .background(Color.mainColor)
-//                .cornerRadius(8)
-//        }
-//    }
-//    .background(Color.secondaryBackground)
-//    .padding(.top, 16)
-//    .padding(.horizontal, 16)
-//}
-
-
-
-
-struct TagedView: View {
-    var body: some View {
-        Text("Aventura")
-            .font(.title2)
-            .fontWeight(.bold)
-            .foregroundColor(.white)
-            .padding(.all, 8)
-            .background(Color.mainColor)
-            .cornerRadius(8)
-    }
-}

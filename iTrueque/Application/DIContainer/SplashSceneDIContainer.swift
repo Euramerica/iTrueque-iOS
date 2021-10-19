@@ -42,9 +42,11 @@ final class SplashSceneDIContainer {
     
     func makeTabBarViewController(coordinatorActions: TabBarViewModelActions) -> UIViewController {
         let profileScreenViewModel = ProfileViewModel(state: ProfileState(), coordinatorActions: coordinatorActions)
+        let homeScreenViewModel = HomeViewModel(state: HomeState(), coordinatorActions: coordinatorActions)
         let viewModel = TabBarViewModel(state: TabBarState(),
                                         coordinatorActions: coordinatorActions,
-                                        profileScreenViewModel: profileScreenViewModel
+                                        profileScreenViewModel: profileScreenViewModel,
+                                        homeScreenViewModel: homeScreenViewModel
         )
         let view = TabBarView().environmentObject(AnyViewModel(viewModel))
         return UIHostingController(rootView: view)

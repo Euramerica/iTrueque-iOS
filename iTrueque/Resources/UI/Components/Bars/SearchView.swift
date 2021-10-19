@@ -16,13 +16,13 @@ struct SearchView: View {
             Image(systemName: "magnifyingglass")
                 .resizable()
                 .frame(width: 21, height: 21, alignment: .center)
-                .padding(.leading, 32)
+                .padding(.leading, 12)
                 .foregroundColor(.bodyColor)
             TextField("Read_today".localized(), text: $searchText)
-                .multilineTextAlignment(.center)
+                .multilineTextAlignment(.leading)
             
         }
-        .frame(height: 56)
+        .frame(height: 46)
         .background(Color.secondaryBackground)
         .cornerRadius(8)
         .padding(.vertical, 8)
