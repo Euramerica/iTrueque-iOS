@@ -12,6 +12,7 @@
 		2D006EA7270260E300BD5774 /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D006EA6270260E300BD5774 /* IntroViewModel.swift */; };
 		2D48F688271E3C81007C2096 /* GenreCollectionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D48F687271E3C81007C2096 /* GenreCollectionRepository.swift */; };
 		2D48F68B271E3E47007C2096 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D48F68A271E3E47007C2096 /* HomeViewModel.swift */; };
+		2D5E603B271F56CA00D3C3C6 /* ProductCollectionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5E603A271F56CA00D3C3C6 /* ProductCollectionRepository.swift */; };
 		2D5E8DE927099B8B00F92594 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5E8DE827099B8B00F92594 /* SplashView.swift */; };
 		2D5E8DEB27099B9600F92594 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5E8DEA27099B9600F92594 /* SplashViewModel.swift */; };
 		2D5E8DED27099BAA00F92594 /* SplashFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5E8DEC27099BAA00F92594 /* SplashFlowCoordinator.swift */; };
@@ -39,6 +40,11 @@
 		2DBCDED027010E9500C42E32 /* TabBarFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDECF27010E9500C42E32 /* TabBarFlowCoordinator.swift */; };
 		2DBCDED227010EA000C42E32 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDED127010EA000C42E32 /* TabBarViewModel.swift */; };
 		2DBCDED427010EAF00C42E32 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBCDED327010EAF00C42E32 /* TabBarView.swift */; };
+		2DBFA3932720B90500BA3CCA /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFA3922720B90500BA3CCA /* URLImage.swift */; };
+		2DBFA3952720B91000BA3CCA /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFA3942720B91000BA3CCA /* ImageLoader.swift */; };
+		2DBFA3972720B91D00BA3CCA /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFA3962720B91C00BA3CCA /* ImageCache.swift */; };
+		2DBFA3992720B93200BA3CCA /* EnvironmentValues+ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFA3982720B93200BA3CCA /* EnvironmentValues+ImageCache.swift */; };
+		2DBFA39B2720BAB900BA3CCA /* URL+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFA39A2720BAB900BA3CCA /* URL+Sugar.swift */; };
 		2DEEA1692719D8E800578B68 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEA1682719D8E800578B68 /* ProfileView.swift */; };
 		2DEEA16B2719D8F700578B68 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEA16A2719D8F700578B68 /* ProfileViewModel.swift */; };
 		2DEEA16D271A3EB500578B68 /* RemoveStoredLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEA16C271A3EB500578B68 /* RemoveStoredLoginUseCase.swift */; };
@@ -86,6 +92,7 @@
 		2D006EA6270260E300BD5774 /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
 		2D48F687271E3C81007C2096 /* GenreCollectionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCollectionRepository.swift; sourceTree = "<group>"; };
 		2D48F68A271E3E47007C2096 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		2D5E603A271F56CA00D3C3C6 /* ProductCollectionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionRepository.swift; sourceTree = "<group>"; };
 		2D5E8DE827099B8B00F92594 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		2D5E8DEA27099B9600F92594 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		2D5E8DEC27099BAA00F92594 /* SplashFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFlowCoordinator.swift; sourceTree = "<group>"; };
@@ -116,6 +123,11 @@
 		2DBCDECF27010E9500C42E32 /* TabBarFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFlowCoordinator.swift; sourceTree = "<group>"; };
 		2DBCDED127010EA000C42E32 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		2DBCDED327010EAF00C42E32 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		2DBFA3922720B90500BA3CCA /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
+		2DBFA3942720B91000BA3CCA /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		2DBFA3962720B91C00BA3CCA /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		2DBFA3982720B93200BA3CCA /* EnvironmentValues+ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+ImageCache.swift"; sourceTree = "<group>"; };
+		2DBFA39A2720BAB900BA3CCA /* URL+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Sugar.swift"; sourceTree = "<group>"; };
 		2DEEA1682719D8E800578B68 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2DEEA16A2719D8F700578B68 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		2DEEA16C271A3EB500578B68 /* RemoveStoredLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveStoredLoginUseCase.swift; sourceTree = "<group>"; };
@@ -338,6 +350,7 @@
 			children = (
 				2DABC7AE27039306009AAE88 /* String.swift */,
 				2DABC7B027039875009AAE88 /* Color.swift */,
+				2DBFA39A2720BAB900BA3CCA /* URL+Sugar.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -348,6 +361,7 @@
 				2DB34985270BAF9600CB63F9 /* UserAuthenticationRepository.swift */,
 				D4F24B8D271E0A7D003EC621 /* GenderRepository.swift */,
 				2D48F687271E3C81007C2096 /* GenreCollectionRepository.swift */,
+				2D5E603A271F56CA00D3C3C6 /* ProductCollectionRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -474,6 +488,17 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		2DBFA3912720B8A000BA3CCA /* URLImage */ = {
+			isa = PBXGroup;
+			children = (
+				2DBFA3922720B90500BA3CCA /* URLImage.swift */,
+				2DBFA3942720B91000BA3CCA /* ImageLoader.swift */,
+				2DBFA3962720B91C00BA3CCA /* ImageCache.swift */,
+				2DBFA3982720B93200BA3CCA /* EnvironmentValues+ImageCache.swift */,
+			);
+			path = URLImage;
+			sourceTree = "<group>";
+		};
 		2DEEA1652719D8B800578B68 /* ProfileScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -510,6 +535,7 @@
 		2DEEA171271B919B00578B68 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2DBFA3912720B8A000BA3CCA /* URLImage */,
 				D4A421C6271C7D02005F7ABB /* Bars */,
 				D4A421C5271C7CDA005F7ABB /* CustomCells */,
 				D4A421C4271C7C87005F7ABB /* Buttons */,
@@ -704,6 +730,7 @@
 				2DEEA17E271CDB1400578B68 /* GenreButton.swift in Sources */,
 				2D48F688271E3C81007C2096 /* GenreCollectionRepository.swift in Sources */,
 				2D5E8DED27099BAA00F92594 /* SplashFlowCoordinator.swift in Sources */,
+				2DBFA3992720B93200BA3CCA /* EnvironmentValues+ImageCache.swift in Sources */,
 				2D5E8DEB27099B9600F92594 /* SplashViewModel.swift in Sources */,
 				2DB4650D270D0121007705A7 /* UserApp.swift in Sources */,
 				2DBCDED227010EA000C42E32 /* TabBarViewModel.swift in Sources */,
@@ -712,8 +739,10 @@
 				D4A421BE271C7044005F7ABB /* SecondaryView.swift in Sources */,
 				D4A421BC271C6F96005F7ABB /* SearchView.swift in Sources */,
 				2DB34983270B5FF100CB63F9 /* StoredLogin.swift in Sources */,
+				2D5E603B271F56CA00D3C3C6 /* ProductCollectionRepository.swift in Sources */,
 				D4ACDCFC27155C230002BC18 /* LoginView.swift in Sources */,
 				D4A421BA271C6E7F005F7ABB /* SectionView.swift in Sources */,
+				2DBFA3952720B91000BA3CCA /* ImageLoader.swift in Sources */,
 				D4F24B84271DF8C6003EC621 /* AppAlias.swift in Sources */,
 				2DBCDEC927010E3500C42E32 /* TabBarSceneDIContainer.swift in Sources */,
 				2D006EA7270260E300BD5774 /* IntroViewModel.swift in Sources */,
@@ -722,6 +751,7 @@
 				2DABC7AF27039306009AAE88 /* String.swift in Sources */,
 				2DB34986270BAF9600CB63F9 /* UserAuthenticationRepository.swift in Sources */,
 				D474A8362719E6A400FFB824 /* HomeView.swift in Sources */,
+				2DBFA3972720B91D00BA3CCA /* ImageCache.swift in Sources */,
 				2DBCDEAC27010D3200C42E32 /* SceneDelegate.swift in Sources */,
 				D4ACDD022715D5170002BC18 /* CreateNewUserUseCase.swift in Sources */,
 				2DEEA1692719D8E800578B68 /* ProfileView.swift in Sources */,
@@ -736,6 +766,7 @@
 				2DEEA178271B91ED00578B68 /* ToastViewModel.swift in Sources */,
 				2DABC7B127039875009AAE88 /* Color.swift in Sources */,
 				2D5E8DF22709C7E700F92594 /* ViewModel.swift in Sources */,
+				2DBFA3932720B90500BA3CCA /* URLImage.swift in Sources */,
 				D474A838271A029200FFB824 /* FeaturedView.swift in Sources */,
 				2DBCDEC427010E0200C42E32 /* AppFlowCoordinator.swift in Sources */,
 				2DF302E22714598A00F67242 /* UserStoredDataSource.swift in Sources */,
@@ -743,6 +774,7 @@
 				2DEEA174271B91D200578B68 /* Toast.swift in Sources */,
 				2DEEA176271B91E100578B68 /* ToastModifier.swift in Sources */,
 				2DBCDEC227010DE200C42E32 /* AppConfiguration.swift in Sources */,
+				2DBFA39B2720BAB900BA3CCA /* URL+Sugar.swift in Sources */,
 				2DBCDED027010E9500C42E32 /* TabBarFlowCoordinator.swift in Sources */,
 				2D5E8DEF2709C10600F92594 /* SplashSceneDIContainer.swift in Sources */,
 				2D48F68B271E3E47007C2096 /* HomeViewModel.swift in Sources */,

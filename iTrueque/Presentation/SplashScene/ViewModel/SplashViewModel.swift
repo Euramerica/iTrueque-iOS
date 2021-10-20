@@ -76,7 +76,20 @@ class SplashViewModel: ViewModel {
                         self?.coordinatorActions?.showIntro()
                     }
                 } receiveValue: { [weak self] user in
-                    self?.storeLogin.execute(user)
+                    if var cancellable = self?.cancellableSet {
+                        self?.storeLogin.execute(user)
+                            .sink { completion in
+                                switch completion {
+                                case .finished:
+                                    break
+                                case .failure(_):
+                                    break
+                                }
+                            } receiveValue: {
+                                print("logout receive")
+                            }
+                            .store(in: &cancellable)
+                    }
                     self?.coordinatorActions?.showHome()
                 }
                 .store(in: &cancellableSet)

@@ -13,10 +13,13 @@ struct SecondaryView: View {
     
     var body: some View {
         HStack{
-            Image("book")
-                .resizable()
-                .scaledToFit()
-                .padding(.all, 4)
+            URLImage(
+                url: URL(string: product.photoURL)!,
+                placeholder: Rectangle().background(Color.light),
+                configuration: { $0.resizable() }
+            )
+            .scaledToFit()
+            .padding(.all, 4)
             VStack(alignment: .leading){
                 Text(product.title)
                     .font(.title2)
@@ -39,9 +42,9 @@ struct SecondaryView: View {
     }
 }
 
-struct SecondatyCellType_Previews: PreviewProvider {
-    static var previews: some View {
-        SecondaryView(product: Product(id: "1", userId: "1", exchangeId: "1", title: "The hobbit", author: "Tolkien", condition: "nuebo", createdAt: Date(), modAt: Date(), img: "www.google.com"))
-            .previewLayout(.sizeThatFits)
-    }
-}
+//struct SecondatyCellType_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SecondaryView(product: Product(id: "1", userId: "1", exchangeId: "1", title: "The hobbit", author: "Tolkien", condition: "nuebo", createdAt: Date(), modAt: Date(), img: "www.google.com"))
+//            .previewLayout(.sizeThatFits)
+//    }
+//}

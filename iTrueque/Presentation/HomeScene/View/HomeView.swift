@@ -10,10 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @State var searchText = ""
-    
-    let getLatestUseCase = GetLatestBooks()
-    let getPopularUseCase = GetMostPopular()
-    
+        
     @EnvironmentObject
     var viewModel: AnyViewModel<HomeState, HomeAction>
     
@@ -41,8 +38,8 @@ struct HomeView: View {
                     SectionView(title: "Latest".localized())
                     ScrollView(.horizontal, showsIndicators: false){
                         HStack(spacing: 32){
-                            ForEach(getLatestUseCase.execute()) { product in
-                                FeaturedView(product: product)
+                            ForEach(viewModel.state.latestBooks) { book in
+                                FeaturedView(product: book)
                             }
                         }
                     }
@@ -53,8 +50,8 @@ struct HomeView: View {
                     SectionView(title: "Populars".localized())
                     ScrollView(.horizontal, showsIndicators: false){
                         HStack(spacing: 32){
-                            ForEach(getPopularUseCase.execute()) { product in
-                                SecondaryView(product: product)
+                            ForEach(viewModel.state.popularBooks) { book in
+                                SecondaryView(product: book)
                             }
                         }
                     }
