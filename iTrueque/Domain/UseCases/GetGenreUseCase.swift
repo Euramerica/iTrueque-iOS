@@ -8,7 +8,7 @@
 import Combine
 import Foundation
 
-public final class GetGenresUseCase{
+public final class GetGenres {
     private let repository = GenreCollectionRepository()
     
     func execute() -> AnyPublisher<[Genre], Error> {

@@ -16,12 +16,14 @@ struct FeaturedView: View {
             Rectangle()
                 .fill(Color.white)
                 .frame(width: .infinity, height: .infinity)
-            
             VStack{
-                Image("book")
-                    .resizable()
-                    .scaledToFit()
-                    .padding(.all, 4)
+                URLImage(
+                    url: URL(string: product.photoURL)!,
+                    placeholder: Rectangle().background(Color.light),
+                    configuration: { $0.resizable() }
+                )
+                .scaledToFit()
+                .padding(.all, 4)
                 Spacer()
                 HStack {
                     //Book and Author
@@ -45,13 +47,15 @@ struct FeaturedView: View {
                 RoundedRectangle(cornerRadius: 8)
                     .stroke(Color.mainColor, lineWidth: 3)
             )
-        }
+        }.frame(width: 280, height: 240)
     }
 }
 
+
 struct LatestCell_Previews: PreviewProvider {
     static var previews: some View {
-        FeaturedView(product:    Product(id: "1", userId: "1", exchangeId: "1", title: "The hobbit", author: "Tolkien", condition: "nuebo", createdAt: Date(), modAt: Date(), img: "www.google.com"))
+        FeaturedView(product:
+                        Product(userId: "1", title: "The hobbit", author: "Tolkien", photoURL: "https://firebasestorage.googleapis.com/v0/b/itrueque-7eb1e.appspot.com/o/m4Bor02XgttVGNXlbAjo%2F80431278-674D-4D95-BB7D-37D537178CF1.jpeg?alt=media&token=7e731def-aaa9-4081-b8f3-8af3c37a6ded"))
             .previewLayout(.sizeThatFits)
     }
 }
