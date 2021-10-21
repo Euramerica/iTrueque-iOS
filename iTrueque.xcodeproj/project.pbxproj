@@ -45,6 +45,8 @@
 		2DBFA3972720B91D00BA3CCA /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFA3962720B91C00BA3CCA /* ImageCache.swift */; };
 		2DBFA3992720B93200BA3CCA /* EnvironmentValues+ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFA3982720B93200BA3CCA /* EnvironmentValues+ImageCache.swift */; };
 		2DBFA39B2720BAB900BA3CCA /* URL+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFA39A2720BAB900BA3CCA /* URL+Sugar.swift */; };
+		2DBFA39D2720DE4A00BA3CCA /* GetProfileDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFA39C2720DE4A00BA3CCA /* GetProfileDataUseCase.swift */; };
+		2DBFA39F2720DF7E00BA3CCA /* UserCollectionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFA39E2720DF7E00BA3CCA /* UserCollectionRepository.swift */; };
 		2DEEA1692719D8E800578B68 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEA1682719D8E800578B68 /* ProfileView.swift */; };
 		2DEEA16B2719D8F700578B68 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEA16A2719D8F700578B68 /* ProfileViewModel.swift */; };
 		2DEEA16D271A3EB500578B68 /* RemoveStoredLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEA16C271A3EB500578B68 /* RemoveStoredLoginUseCase.swift */; };
@@ -128,6 +130,8 @@
 		2DBFA3962720B91C00BA3CCA /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		2DBFA3982720B93200BA3CCA /* EnvironmentValues+ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+ImageCache.swift"; sourceTree = "<group>"; };
 		2DBFA39A2720BAB900BA3CCA /* URL+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Sugar.swift"; sourceTree = "<group>"; };
+		2DBFA39C2720DE4A00BA3CCA /* GetProfileDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileDataUseCase.swift; sourceTree = "<group>"; };
+		2DBFA39E2720DF7E00BA3CCA /* UserCollectionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionRepository.swift; sourceTree = "<group>"; };
 		2DEEA1682719D8E800578B68 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2DEEA16A2719D8F700578B68 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		2DEEA16C271A3EB500578B68 /* RemoveStoredLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveStoredLoginUseCase.swift; sourceTree = "<group>"; };
@@ -290,15 +294,16 @@
 		2D5E8DF5270A6E2200F92594 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				2D5E8DFB270A6EEC00F92594 /* GetStoredLoginUseCase.swift */,
-				2D5E8DFD270A6F0C00F92594 /* PerformLoginUseCase.swift */,
 				D4ACDD012715D5170002BC18 /* CreateNewUserUseCase.swift */,
-				2DEEA16C271A3EB500578B68 /* RemoveStoredLoginUseCase.swift */,
-				2DEEA16E271A3F0F00578B68 /* StoreLoginUseCase.swift */,
 				2DEEA17B271C8A1800578B68 /* CreateNewUserDatabaseUseCase.swift */,
 				D4F24B85271DFF49003EC621 /* GetGenreUseCase.swift */,
 				D4F24B87271E0859003EC621 /* GetLatestBooksUseCase.swift */,
 				D4F24B89271E0894003EC621 /* GetMostPopularUseCase.swift */,
+				2DBFA39C2720DE4A00BA3CCA /* GetProfileDataUseCase.swift */,
+				2D5E8DFB270A6EEC00F92594 /* GetStoredLoginUseCase.swift */,
+				2D5E8DFD270A6F0C00F92594 /* PerformLoginUseCase.swift */,
+				2DEEA16C271A3EB500578B68 /* RemoveStoredLoginUseCase.swift */,
+				2DEEA16E271A3F0F00578B68 /* StoreLoginUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -362,6 +367,7 @@
 				D4F24B8D271E0A7D003EC621 /* GenderRepository.swift */,
 				2D48F687271E3C81007C2096 /* GenreCollectionRepository.swift */,
 				2D5E603A271F56CA00D3C3C6 /* ProductCollectionRepository.swift */,
+				2DBFA39E2720DF7E00BA3CCA /* UserCollectionRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -749,12 +755,14 @@
 				2DEEA16B2719D8F700578B68 /* ProfileViewModel.swift in Sources */,
 				D4F24B8E271E0A7D003EC621 /* GenderRepository.swift in Sources */,
 				2DABC7AF27039306009AAE88 /* String.swift in Sources */,
+				2DBFA39D2720DE4A00BA3CCA /* GetProfileDataUseCase.swift in Sources */,
 				2DB34986270BAF9600CB63F9 /* UserAuthenticationRepository.swift in Sources */,
 				D474A8362719E6A400FFB824 /* HomeView.swift in Sources */,
 				2DBFA3972720B91D00BA3CCA /* ImageCache.swift in Sources */,
 				2DBCDEAC27010D3200C42E32 /* SceneDelegate.swift in Sources */,
 				D4ACDD022715D5170002BC18 /* CreateNewUserUseCase.swift in Sources */,
 				2DEEA1692719D8E800578B68 /* ProfileView.swift in Sources */,
+				2DBFA39F2720DF7E00BA3CCA /* UserCollectionRepository.swift in Sources */,
 				D4ACDD00271566C90002BC18 /* RegisterView.swift in Sources */,
 				2DEEA17C271C8A1800578B68 /* CreateNewUserDatabaseUseCase.swift in Sources */,
 				D4F24B88271E0859003EC621 /* GetLatestBooksUseCase.swift in Sources */,

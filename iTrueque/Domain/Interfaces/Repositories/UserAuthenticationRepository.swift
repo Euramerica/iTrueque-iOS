@@ -40,7 +40,7 @@ final class UserAuthenticationRepository {
                     if let error = error {
                         return promise(.failure(error))
                     } else if let email = result?.user.email, let uid = result?.user.uid {
-                        let userApp = UserApp(uid: uid, name: "", surname: "", email: email, password: password)
+                        let userApp = UserApp(uid: uid, name: "", surname: "", email: email, password: password, avatar: "")
                         return promise(.success(userApp))
                     }
                 }
@@ -51,13 +51,11 @@ final class UserAuthenticationRepository {
     func createUser(name: String, surname: String, email: String, password: String) -> AnyPublisher<UserApp, Error> {
         Deferred{
             Future<UserApp, Error>{ promise in
-//                let userApp = UserApp(email: email, password: password)
-//                return promise(.success(userApp))
                 Auth.auth().createUser(withEmail: email, password: password) { result, error in
                     if let error = error {
                         return promise(.failure(error))
                     } else if let email = result?.user.email, let uid = result?.user.uid {
-                        let userApp = UserApp(uid: uid, name: name, surname: surname, email: email, password: password)
+                        let userApp = UserApp(uid: uid, name: name, surname: surname, email: email, password: password, avatar: "")
                         return promise(.success(userApp))
                     }
                 }

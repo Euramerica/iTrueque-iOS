@@ -28,3 +28,5 @@
 "Your_surname"              = "Tus apellidos";
 "Confirm_password"          = "Confirma la contraseña";
 "Confirm_password_valid"    = "Las contraseñas no son iguales";
+
+"Not_current_user_available"= "Not current user available";
